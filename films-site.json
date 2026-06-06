@@ -1,0 +1,31 @@
+{
+  "header": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "Original Films",
+      "logo": { "src": "https://magmalabsdev.github.io/site-data/logo.svg", "alt": "Magma Labs logo", "width": 34, "height": 34 },
+      "text": "Original Films"
+    },
+    "links": [
+      { "label": "Films", "href": "/" },
+      { "label": "Magma Labs", "href": "https://magmalabs.dev/" }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "Original Films",
+      "logo": { "src": "https://magmalabsdev.github.io/site-data/logo.svg", "alt": "", "width": 34, "height": 34 },
+      "text": "Original Films"
+    },
+    "columns": [
+      { "title": "Films", "links": [{ "label": "All Films", "href": "/" }] },
+      { "title": "Magma Labs", "links": [
+        { "label": "Home", "href": "https://magmalabs.dev/" },
+        { "label": "Blog", "href": "https://magmalabs.dev/blog/" },
+        { "label": "Contact", "href": "https://magmalabs.dev/#contact" }
+      ]}
+    ],
+    "fineprint": "© {year} Magma Labs. All rights reserved."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "ECP — Magma Labs",
+      "logo": { "src": "https://magmalabsdev.github.io/site-data/logo.svg", "alt": "Magma Labs logo", "width": 34, "height": 34 },
+      "text": "Magma Labs"
+    },
+    "links": [
+      { "label": "ECP", "href": "/" },
+      { "label": "Magma Labs", "href": "https://magmalabs.dev/" },
+      { "label": "Contact", "href": "https://magmalabs.dev/#contact", "desktopClass": "btn small secondary" }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "ECP — Magma Labs",
+      "logo": { "src": "https://magmalabsdev.github.io/site-data/logo.svg", "alt": "", "width": 34, "height": 34 },
+      "text": "Magma Labs"
+    },
+    "columns": [
+      { "title": "Product", "links": [{ "label": "ECP", "href": "/" }] },
+      { "title": "Magma Labs", "links": [
+        { "label": "Home", "href": "https://magmalabs.dev/" },
+        { "label": "Projects", "href": "https://magmalabs.dev/products/" },
+        { "label": "Contact", "href": "https://magmalabs.dev/#contact" }
+      ]}
+    ],
+    "fineprint": "© {year} Magma Labs. All rights reserved."
+  }
+}
