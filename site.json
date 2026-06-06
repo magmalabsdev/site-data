@@ -1,0 +1,70 @@
+{
+  "header": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "Magma Labs home",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Magma Labs logo",
+        "width": 34,
+        "height": 34
+      },
+      "text": "Magma Labs"
+    },
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Projects", "href": "/products/" },
+      { "label": "Partnerships", "href": "/partnerships/" },
+      { "label": "Events", "href": "https://events.magmalabs.dev/" },
+      { "label": "Awards", "href": "/awards/" },
+      { "label": "Blog", "href": "/blog/", "currentFor": ["blog", "post"] },
+      { "label": "Team", "href": "/team/" },
+      {
+        "label": "Contact",
+        "href": "/#contact",
+        "hrefHome": "#contact",
+        "desktopClass": "btn small secondary"
+      }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "href": "/",
+      "ariaLabel": "Magma Labs home",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "",
+        "width": 34,
+        "height": 34
+      },
+      "text": "Magma Labs"
+    },
+    "columns": [
+      {
+        "title": "Menu",
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "Team", "href": "/team/" },
+          { "label": "Films", "href": "/films/" },
+          { "label": "Contact", "href": "/#contact", "hrefHome": "#contact" }
+        ]
+      },
+      {
+        "title": "Projects",
+        "links": [
+          { "label": "Projects", "href": "/products/" },
+          { "label": "Partnerships", "href": "/partnerships/" }
+        ]
+      },
+      {
+        "title": "Media",
+        "links": [
+          { "label": "Events", "href": "https://events.magmalabs.dev/" },
+          { "label": "Awards", "href": "/awards/" },
+          { "label": "Blog", "href": "/blog/", "currentFor": ["blog", "post"] }
+        ]
+      }
+    ],
+    "fineprint": "© {year} Magma Labs. All rights reserved."
+  }
+}

@@ -1,0 +1,1027 @@
+{
+  "posts": [
+    {
+      "id": "card-showcase",
+      "visibility": false,
+      "title": "Card Showcase: Rich Blog Layouts",
+      "summary": "A demonstration post that exercises every supported blog card type.",
+      "images": {
+        "thumbnail": "/images/events/labs-day-26.png"
+      },
+      "content": [
+        {
+          "type": "text",
+          "title": "Text",
+          "figures": [
+            {
+              "type": "paragraph",
+              "text": "This card shows the new baseline structure: each blog block is now a card with an optional title and a list of content figures."
+            },
+            {
+              "type": "paragraph",
+              "text": "That means a post can move from plain prose into images, charts, timelines, and other visual formats without introducing a separate template for each section."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Titles are optional on every card.",
+                "Each card can contain multiple figures.",
+                "Legacy text posts still render by being converted into text cards."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Single",
+          "layout": "single",
+          "figures": [
+            {
+              "src": "/images/blog/peer-voting-flaws/vikinghacks.jpg",
+              "alt": "Hackathon participants standing near a presentation area.",
+              "caption": "A single hero-style image works well when one photo should carry the section."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Multiple Side by Side",
+          "layout": "grid",
+          "figures": [
+            {
+              "src": "/images/partnerships/campfire-san-jose/opening.JPG",
+              "alt": "Opening presentation at Campfire San Jose.",
+              "caption": "Opening talk"
+            },
+            {
+              "src": "/images/partnerships/campfire-san-jose/trophies.JPG",
+              "alt": "Trophies lined up on a table.",
+              "caption": "Awards table"
+            },
+            {
+              "src": "/images/partnerships/campfire-san-jose/winners.JPG",
+              "alt": "Winners standing together after the event.",
+              "caption": "Closing photo"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Carousel",
+          "layout": "carousel",
+          "figures": [
+            {
+              "src": "/images/products/openagv/gallery-1.svg",
+              "alt": "First OpenAGV product visual.",
+              "caption": "Slide 1"
+            },
+            {
+              "src": "/images/products/openagv/gallery-2.svg",
+              "alt": "Second OpenAGV product visual.",
+              "caption": "Slide 2"
+            },
+            {
+              "src": "/images/products/openagv/gallery-3.svg",
+              "alt": "Third OpenAGV product visual.",
+              "caption": "Slide 3"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "title": "Charts",
+          "figures": [
+            {
+              "chartType": "bar",
+              "title": "Bar",
+              "description": "Projects launched by quarter.",
+              "data": [
+                {
+                  "label": "Q1",
+                  "value": 4
+                },
+                {
+                  "label": "Q2",
+                  "value": 7
+                },
+                {
+                  "label": "Q3",
+                  "value": 5
+                },
+                {
+                  "label": "Q4",
+                  "value": 9
+                }
+              ]
+            },
+            {
+              "chartType": "line",
+              "title": "Line",
+              "description": "Weekly traffic after a homepage refresh.",
+              "data": [
+                {
+                  "label": "Mon",
+                  "value": 120
+                },
+                {
+                  "label": "Tue",
+                  "value": 168
+                },
+                {
+                  "label": "Wed",
+                  "value": 156
+                },
+                {
+                  "label": "Thu",
+                  "value": 198
+                },
+                {
+                  "label": "Fri",
+                  "value": 244
+                }
+              ]
+            },
+            {
+              "chartType": "pie",
+              "title": "Pie",
+              "description": "Where demo requests came from.",
+              "unit": "%",
+              "data": [
+                {
+                  "label": "Blog",
+                  "value": 42
+                },
+                {
+                  "label": "Events",
+                  "value": 24
+                },
+                {
+                  "label": "Partners",
+                  "value": 18
+                },
+                {
+                  "label": "Direct",
+                  "value": 16
+                }
+              ]
+            },
+            {
+              "chartType": "scatter",
+              "title": "Scatter",
+              "description": "Response time versus signup conversion.",
+              "xLabel": "Latency (ms)",
+              "yLabel": "Signup rate (%)",
+              "points": [
+                {
+                  "label": "A",
+                  "x": 120,
+                  "y": 4.8
+                },
+                {
+                  "label": "B",
+                  "x": 180,
+                  "y": 4.3
+                },
+                {
+                  "label": "C",
+                  "x": 240,
+                  "y": 3.9
+                },
+                {
+                  "label": "D",
+                  "x": 310,
+                  "y": 3.4
+                }
+              ]
+            },
+            {
+              "chartType": "table",
+              "title": "Table",
+              "description": "Campaign snapshot in table form.",
+              "columns": [
+                "Channel",
+                "CTR",
+                "Signups"
+              ],
+              "rows": [
+                [
+                  "Homepage",
+                  "5.8%",
+                  "128"
+                ],
+                [
+                  "Blog",
+                  "4.1%",
+                  "72"
+                ],
+                [
+                  "Events",
+                  "7.2%",
+                  "43"
+                ]
+              ]
+            },
+            {
+              "chartType": "radar",
+              "title": "Radar",
+              "description": "How the launch scored across six dimensions.",
+              "max": 10,
+              "data": [
+                {
+                  "label": "Speed",
+                  "value": 8
+                },
+                {
+                  "label": "Polish",
+                  "value": 9
+                },
+                {
+                  "label": "Clarity",
+                  "value": 7
+                },
+                {
+                  "label": "Reach",
+                  "value": 6
+                },
+                {
+                  "label": "Depth",
+                  "value": 8
+                },
+                {
+                  "label": "Retention",
+                  "value": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "big-number",
+          "title": "Big Number",
+          "figures": [
+            {
+              "title": "Builds shipped",
+              "stat": "128",
+              "description": "Internal deploys completed before launch week ended."
+            },
+            {
+              "title": "Reviewer completion",
+              "stat": "92%",
+              "description": "Share of post sections that received a final pass."
+            },
+            {
+              "title": "Partners onboarded",
+              "stat": "14",
+              "description": "External groups who received the new materials package."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "figures": [
+            {
+              "quote": "A flexible publishing system should let the content decide the layout, not the other way around.",
+              "attribution": "Magma Labs",
+              "role": "Content system note"
+            }
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Side by Side Comparison",
+          "figures": [
+            {
+              "title": "Text-only section",
+              "tone": "warn",
+              "items": [
+                "Good for uninterrupted reading.",
+                "Weak at showing data or visual evidence.",
+                "Forces every idea into the same presentation shape."
+              ]
+            },
+            {
+              "title": "Card-driven section",
+              "tone": "positive",
+              "items": [
+                "Lets each idea use the format that fits it best.",
+                "Keeps stats, media, and structured answers readable.",
+                "Makes long posts easier to scan without losing depth."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "link-embed",
+          "title": "Link Embed",
+          "figures": [
+            {
+              "url": "https://hackclub.com",
+              "label": "Hack Club",
+              "description": "A community reference that often appears in Magma Labs event and hackathon discussions.",
+              "site": "Community"
+            },
+            {
+              "url": "https://itch.io/jam/gmtk-game-jam",
+              "label": "GMTK Game Jam",
+              "description": "An example of a large event where judging format and submission scale both matter.",
+              "site": "Event"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Timeline",
+          "figures": [
+            {
+              "time": "09:00",
+              "title": "Kickoff",
+              "description": "The post structure was switched from section-only prose to reusable content cards.",
+              "image": {
+                "src": "/images/events/labs-day-26.png",
+                "alt": "Poster for Labs Day 26.",
+                "caption": "Initial launch point"
+              }
+            },
+            {
+              "time": "13:30",
+              "title": "Media pass",
+              "description": "Images and visual blocks were added so the article could show evidence instead of only describing it.",
+              "image": {
+                "src": "/images/events/campfire-sj.jpg",
+                "alt": "Campfire San Jose event photo.",
+                "caption": "Adding visual proof"
+              }
+            },
+            {
+              "time": "18:00",
+              "title": "Wrap-up",
+              "description": "The example post finished with charts, embeds, and structured Q and A blocks to prove the full system end to end.",
+              "image": {
+                "src": "/images/awards/showcase-certificate.png",
+                "alt": "Showcase certificate image.",
+                "caption": "Final review"
+              }
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Code Embed",
+          "figures": [
+            {
+              "filename": "renderBlogCard.js",
+              "language": "JavaScript",
+              "code": "function createBlogCodeCard(card) {\n  const wrap = document.createElement('div');\n  wrap.className = 'blog-code-stack';\n\n  (card.figures || []).forEach((figure) => {\n    const block = document.createElement('div');\n    block.className = 'blog-code-block';\n\n    const pre = document.createElement('pre');\n    pre.textContent = figure.code || '';\n    block.appendChild(pre);\n    wrap.appendChild(block);\n  });\n\n  return wrap;\n}"
+            },
+            {
+              "filename": "schema.json",
+              "language": "JSON",
+              "code": "{\n  \"type\": \"code\",\n  \"title\": \"Code Embed\",\n  \"figures\": [\n    {\n      \"filename\": \"hello.js\",\n      \"language\": \"JavaScript\",\n      \"code\": \"console.log('Hello, Magma Labs!');\"\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "type": "qa",
+          "title": "Q and A",
+          "figures": [
+            {
+              "question": "Do older posts need to be rewritten immediately?",
+              "answer": "No. Older section-based content is converted into text cards automatically, so existing posts keep working."
+            },
+            {
+              "question": "Can one post mix multiple figure types in one article?",
+              "answer": "Yes. The showcase above combines prose, images, charts, stats, quotes, comparisons, embeds, a timeline, and Q and A in a single post."
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "showcase",
+        "blog",
+        "design",
+        "cards"
+      ],
+      "writtenAt": "2026-05-13",
+      "updatedAt": "2026-05-13",
+      "readMinutes": 8,
+      "citations": [
+        {
+          "label": "Hack Club",
+          "url": "https://hackclub.com"
+        },
+        {
+          "label": "GMTK Game Jam",
+          "url": "https://itch.io/jam/gmtk-game-jam"
+        }
+      ]
+    },
+    {
+      "id": "peer-voting-flaws",
+      "visibility": true,
+      "title": "The Flawed Nature of Peer Voting",
+      "summary": "Why Unregulated Peer Voting is an Abysmal Judging System.",
+      "images": {
+        "thumbnail": "/images/blog/peer-voting-flaws/vikinghacks.jpg"
+      },
+      "content": [
+        {
+          "heading": "Introduction",
+          "paragraphs": [
+            "As of writing this blog post, I have been involved in the organization of two hackathons and I've participated in a good number of them myself. Hackathons often come with prizes, but to determine who wins those prizes, it needs to be determined which projects are of the highest quality. This is often done in two ways: either professional judges review each and every project and hand pick the best one, or the projects are released to the participants and each participant is allowed to vote on which projects should win.",
+            "My first hackathon, MelonJam 5 used a judging system to determine winners but included a community vote prize for the game voted first place overall on the itch.io jam page. The jam allowed any one submitter to rate any other submission on categories such as gameplay, theming, and polish from one to five stars. On the surface, this seems like a great way to allow the community to participate in the democratic process of selecting the winners but if you think about it for more than five minutes, you start to discover all kinds of issues."
+          ]
+        },
+        {
+          "heading": "Where peer voting breaks",
+          "paragraphs": [
+            "The vast majority of traditional hackathons use a professional judging system. Oftentimes the judges are representatives sent by sponsors or the organizers themselves. Peer voting as a judging system began to rise in popularity mainly within Hack Club hosted global satellite hackathons such as Counterspell, Scrapyard and Daydream. Hack Club has also been known to use peer voting to determine project quality in several programs such as Summer of Making.",
+            "The fundamental flaws of the peer voting system stem from the fact that participants would not be able to judge projects fairly due to personal biases and conflicts of interest. Every participant, even those who attend an event just for the experience, wants to win a prize. When given a vote, some participants will vote fairly, but the desire to win can take others down a more nefarious path. Participants can and will \"trade votes\" with other teams in order to boost their own chances of winning prizes, something I have personally witnessed at Scrapyard Silicon Valley. In other cases like MakerHacks 1, I have seen participants of the Open Prototype (traditional hackathon) track begging robotics participants (who were allowed to vote in the open prototype voting form) to vote for their project, making the judging less about project quality and more about advertising."
+          ]
+        },
+        {
+          "heading": "Review bombing and bias",
+          "paragraphs": [
+            "While advertising and trading votes can significantly influence the results of a ballot judged hackathon, when the voting system is not casting ballots but rather rating each and every project on a scale such as in the case of itch.io game jams, the potential for nefarious influence significantly increases. Properly testing, rating, and reviewing a project takes time, which makes it impractical for a participant to rate every project. However, it is extremely easy for a nefarious actor to spam one-star ratings on many projects to decrease the average rating of other projects and make their own look better in comparison. This spamming of low ratings is known as \"review bombing\" and even a small percentage of review bombers can destroy honestly voted ratings to the point where they become effectively useless for any kind of judging.",
+            "Some may be quick to point out that review bombing will have the same effect on every project in the event. This is obviously an incorrect statement as some projects receive less ratings than others due to incompatible platforms, a steeper learning curve, or general randomness, meaning a review bomb will have far worse effects on projects with less ratings.",
+            "Even if a participant is trying to vote ethically, it is effectively impossible for them to make a completely fair vote. In large scale events, a participant may have dozens or even hundreds of projects to choose between and even if they wanted to, they simply would not have the time to carefully review every project. Soft barriers such as a lack of thumbnail images or tutorial or hard barriers like platform incompatibility can hinder a participant's attempt to test and rate a project. The limited amount of time to review projects ultimately leads to votes being determined by first impressions instead of overall functionality. Logical biases such as the familiarity and availability heuristics can cause participants to be biased toward projects made by teams working near them. Ultimately all of these factors combined lead to biased results not caused by nefarious intent but by the imperfection of human nature."
+          ]
+        },
+        {
+          "heading": "Why judges are stronger",
+          "paragraphs": [
+            "Professional judges are also affected by many of the same logical biases that affect participants, but the effect is mitigated significantly due to a judge's exposure to much more projects. While judges may have biases favoring a certain type or style of project, they do not have any personal interest in manipulating the results. A judge's entire role is to judge projects, so they are able to review more projects with more time for each project, allowing them to judge projects more fairly. Professional judges have far more knowledge about the industry they're employed in, so they can most accurately determine which projects are of the highest quality. It is nearly impossible to nefariously influence the outcome of a professionally judged hackathon. Professional judging is not a perfect system, but it is far less biased and unfair as peer voted results.",
+            "The best and most obvious solution, the one that the majority of hackathons have implemented, is simply not to use peer voting. This was and still is the case in MelonJam and in essentially every hackathon not affiliated with Hack Club."
+          ]
+        },
+        {
+          "heading": "A practical compromise",
+          "paragraphs": [
+            "In extremely large scale events such as the GMTK Game Jam, the number of submissions makes a pure judging system extremely impractical, and purely voted results would contain all the issues mentioned above. Instead, GMTK uses a hybrid system where entries enter a round of community voting and the top 100 games in the jam, and the judge will play those 100 games to determine 20 winners.",
+            "When peer voting is absolutely required, actions can be taken to improve the fairness of the process. These actions include but are not limited to: requiring votes to include a review of the project, allowing organizers to disqualify projects that are asset or template rips, and automatic detection and removal of review bombs.",
+            "However, in smaller events such as Daydream Global and smaller satellite hackathons, there really is no excuse to not involve judges in some part of the process other than \"we don't want to\". MelonJam is judged entirely by current and former members of the Cupertino Game Development Club. Each officer is assigned a set of games to judge and told to pick three favorites. The selected projects are combined to enter a final discussion with all judges, and winners are selected. Daydream Global could have easily been professionally judged with even a small team (say eight judges judging 25 games each) of judges, bypassing all of the inevitable problems of peer voting. Instead, we got a single category of judge prizes with the vast majority of prizes being determined by a fundamentally flawed system."
+          ]
+        }
+      ],
+      "tags": [
+        "hackathons",
+        "events",
+        "hackclub",
+        "ux"
+      ],
+      "writtenAt": "2025-10-22",
+      "updatedAt": "2025-10-22",
+      "readMinutes": 6,
+      "citations": [
+        {
+          "label": "Hack Club",
+          "url": "https://hackclub.com"
+        },
+        {
+          "label": "GMTK Game Jam",
+          "url": "https://itch.io/jam/gmtk-game-jam"
+        }
+      ]
+    },
+    {
+      "id": "all-or-nothing",
+      "visibility": true,
+      "title": "Why \"Closed Source\" ≠ \"Bad\"",
+      "summary": "The Composition Fallacy and All-or-Nothing Thinking",
+      "images": {
+        "thumbnail": "/images/blog/all-or-nothing/macbook.png"
+      },
+      "content": [
+        {
+          "heading": "Introduction",
+          "paragraphs": [
+            "One of the most commonly repeated statements within the open source hacker community has got to be \"Anything that isn’t open source is automatically the worst thing to ever exist.\" And while you won’t likely hear anyone utter those exact words, members of this community often refuse to recommend Bambu Lab 3d printers, Mac Laptops, or even Unity Engine simply because they aren’t open source.",
+            "Some will even go as far as to claim that users of closed source products aren’t \"real hackers\" and that all \"real hackers\" use a 12 year old ThinkPad, or even better, a PC. But while closed source software isn’t a deal breaker for the majority of the population, this argument is part of a larger systemic problem of all-or-nothing thinking."
+          ]
+        },
+        {
+          "heading": "What causes all-or-nothing thinking",
+          "paragraphs": [
+            "Human brains aren’t perfect and our minds don’t fully process everything we perceive - our brains take shortcuts to give us what looks like a full picture but don’t contain the full details. But more importantly, we as humans are being continuously shaped by what we learn and the behavior of those around us, namely education and politics.",
+            "From the first day of school to the day you graduate, your performance at school is graded on a letter scale with A being an excellent score and F being failing. At least, that’s how it works in theory. From 1985 to 2020, the average high school GPA in the United States has risen from 2.6 to 3.1 with the percentage of A’s increasing even sharper. (https://www.nea.org/nea-today/all-news-articles/grade-inflation-real-it-real-problem)"
+          ]
+        },
+        {
+          "heading": "The composition fallacy in practice",
+          "paragraphs": [
+            "In academically competitive regions like the Bay Area, grading essentially functions on a pass-or-fail system: an A is a pass and a B or lower is a fail, an all-or-nothing system. But even in areas where academics are less important, parents have their own standards of what grade is acceptable and oftentimes, that standard is a fixed number across all subjects. For example, if a parent’s standards were for their child to get a minimum of B across all subjects, a student with A’s in math, science, and English but a C in history would be treated as a failure. However, a student with a B in all subjects would meet their parents standards even though their average grade is lower than the first example.",
+            "When multiple layers of all-or-nothing thinking stack together, what ends up happening is known as the fallacy of composition: since a C in history is less than a B, the child is “failing” history and since the child is falling history, they are failing their parents standards. What is true for one part of the whole must be true for the whole. If one aspect of a person or product is bad, then the person or product as a whole is bad. This is an incorrect statement because most people or products exist in a gray area: they do some things well but not everything."
+          ]
+        },
+        {
+          "heading": "Closed source and nuance",
+          "paragraphs": [
+            "Going back to the hacker community, some hackers will dismiss Bambu Lab 3d printers as an option entirely simply because they run closed source software, disregarding the dozens of quality of life improvements over other brands. For most beginners and even engineers, those convenience features offer a better value proposition over other brands which is why people end up buying them, something the open-source-or-death proponents dismiss as being “fanboys”, with nearly the exact same situation playing out for Mac laptops and Unity Engine.",
+            "To put it bluntly, these people are wrong. Closed source software, or any single aspect of a product, while possibly being a deal breaker for some, shouldn’t define the entire product. I personally do not use Godot engine because I find Unity much easier to use, but when people inquire about what engine they should start with, it’s often my top recommendation because I can see that what’s best for me isn’t the same as what’s best for everyone. The day the hacker community is able to recognize this is the day they begin to be taken seriously by the rest of the world."
+          ]
+        }
+      ],
+      "tags": [
+        "logic",
+        "unity",
+        "bambu",
+        "mac"
+      ],
+      "writtenAt": "2026-4-29",
+      "updatedAt": "2026-4-29",
+      "readMinutes": 4,
+      "citations": [
+        {
+          "label": "NEA grade inflation analysis",
+          "url": "https://www.nea.org/nea-today/all-news-articles/grade-inflation-real-it-real-problem"
+        }
+      ]
+    },
+    {
+      "id": "event-ux",
+      "visibility": false,
+      "title": "Five approaches to event UX",
+      "summary": "How event planners solve problems",
+      "images": {
+        "thumbnail": "/images/events/labs-day-26.png"
+      },
+      "content": [
+        {
+          "type": "text",
+          "figures": [
+            {
+              "type": "paragraph",
+              "text": "Hackathons are definitely one of the most resourceful events you can run. For beginners, they provide a great opportunity to learn programming. They’re a great way for companies to connect with student developers and perform outreach while offering an educational event entirely free of charge. They can become game jams to cater toward artists and sound designers on top of programmers and the scale of the event can be as narrow as a single school to as wide as the entire globe."
+            },
+            {
+              "type": "paragraph",
+              "text": "But hackathons also come with their unique challenges. Being primarily funded by corporate sponsors demands outreach tables, keynotes, and sometimes custom tracks or prize categories, all of which make an event feel more corporate and less human. And satellite events, 200+ events that are run simultaneously across the globe, events that share the same website, branding, schedule, and theming, apart from location, how do you differentiate one from another? "
+            },
+            {
+              "type": "paragraph",
+              "text": "Running events is all about resolving problems, and so the best event organizers aren’t the ones who can come up with good ideas, but the ones that can come up with quick fixes to onsite issues.I was the lead organizer for Campfire San Jose and today we’re diving into how event planners solved some of the most widespread, endemic problems plaguing hackathons around the globe. "
+            }
+          ]
+        },
+        {
+          "type": "big-number",
+          "title": "Campfire San Jose",
+          "figures": [
+            {
+              "title": "Participant satisfaction",
+              "stat": "89",
+              "description": "20 points over global average"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "figures": [
+            {
+              "title": "Identifying the problem",
+              "type": "paragraph",
+              "text": "Before Campfire, there was Daydream, a very similar event structure but with different branding. I was involved in organizing Daydream, but Campfire was my first time leading an event team, and to be entirely honest, I didn’t know what the heck I was doing. My planning philosophy going into this was to solve problems, and one of the questions I asked when recruiting organizers was “what problem do you see at most hackathons and how can it be solved?” Of the responses that I read, one issue kept coming up: workshops. "
+            },
+            {
+              "type": "paragraph",
+              "text": "Citing low attendance and participant interest, some organizers wanted to cut all workshops except for the ones absolutely required. Other organizers argued that hackathons were already not very beginner friendly and running more workshops was the way to go. It’s physically impossible to run both more and less workshops at the same time, but it does make you think, does the issue really lie in the number of workshops? "
+            },
+            {
+              "type": "paragraph",
+              "text": "e"
+            }
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Campfire San Jose Workshops",
+          "figures": [
+            {
+              "title": "Godot",
+              "tone": "positive",
+              "items": [
+                "Opens source beginner friendly game engine"
+              ]
+            },
+            {
+              "title": "Gamemaker",
+              "tone": "warn",
+              "items": [
+                "Required by Hack Club"
+              ]
+            },
+            {
+              "title": "2D Art",
+              "tone": "positive",
+              "items": [
+                "Sprite design and VFX"
+              ]
+            },
+            {
+              "title": "Sound Design",
+              "tone": "positive",
+              "items": [
+                "Interactive sound recording activity"
+              ]
+            },
+            {
+              "title": "Polish",
+              "tone": "positive",
+              "items": [
+                "Final touches to make a game great"
+              ]
+            },
+            {
+              "title": "Shipping",
+              "tone": "positive",
+              "items": [
+                "Exporting games to a playable state"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "figures": [
+            {
+              "type": "paragraph",
+              "text": "It’s impossible to get everything right when running an event, which is why it’s so important to make improvements between iterations. And it’s even more important to know what problems exist so you know what to improve on, and one of the easiest ways to do this is to ask the participants themselves. "
+            },
+            {
+              "title": "Approach 1: Listen to participant feedback",
+              "type": "paragraph",
+              "text": "Prizes for Daydream Global, the online global version of Daydream, as well as every official Hack Club hackathon at the time, were determined entirely by peer voting which while eliminating organizer and judge bias, introduced new problems of its own. Peer voting, at best, is a flawed project judging system for hackathons and oh I see you, before you start typing those hate comments, you need to understand there’s a fundamental difference between electoral democracy and hackathon peer voting."
+            },
+            {
+              "type": "paragraph",
+              "text": "In a democratic voting system, you have a large population of millions of people and a select few candidates to choose from. This makes it relatively easy to research all candidates and make an accurate choice based on your personal situation. I say relatively because that doesn’t always happen, as illustrated by the 2024 presidential election. "
+            },
+            {
+              "type": "paragraph",
+              "text": "But hackathon peer voting is a different scenario entirely. Not only is the voter-candidate ratio blown up significantly, because the voters are also the candidates, they have a personal incentive to vote unfairly. Participants would “trade votes” with each other to increase their own chance of winning. Some would go as far to spam low reviews on every project in order to decrease others’ ratings relative to theirs. This obviously makes for a very unfair and biased judging system, so the events team made a change. . "
+            },
+            {
+              "type": "paragraph",
+              "text": "In a democratic voting system, you have a large population of millions of people and a select few candidates to choose from. This makes it relatively easy to research all candidates and make an accurate choice based on your personal situation. I say relatively because that doesn’t always happen, as illustrated by the 2024 presidential election. "
+            }
+          ]
+        },
+        {
+          "type": "big-number",
+          "title": "Campfire Judging Structure",
+          "figures": [
+            {
+              "title": "Flagship",
+              "stat": "Hybrid",
+              "description": "Peer voted top prize, judged categorical prizes"
+            },
+            {
+              "title": "Satellite",
+              "stat": "Peer Voting",
+              "description": "Enforced peer voting for podium prizes"
+            },
+            {
+              "title": "Global",
+              "stat": "Hybrid",
+              "description": "GMTK style judging with initial peer voting sweep and judges picking from top 50"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "figures": [
+            {
+              "title": "Approach 2: Increase margin of error",
+              "type": "paragraph",
+              "text": "Delays are the final boss of events and hackathons are no exception. Wifi can break, food may not arrive on time, and project presenters can run into technical difficulties. When I see on the official schedule that a robotics competition will end at 5:30, I tell my parents to pick me up at 7, and they usually arrive just as the event ends. But the way events handle these delays can completely change the final outcome. At MakerHacks 1, the organizers significantly underestimated the time it takes to run robotics matches, and the event ended nearly an hour behind schedule. In a schedule with no flexibility, one event getting delayed leads to a cascading effect of every event afterward being delayed, worsening the problem until you end with a closing ceremony hours after the originally scheduled time."
+            },
+            {
+              "type": "paragraph",
+              "text": "While time can be regained by cutting other events, an ideal schedule includes built in delay buffers to reduce the effect any individual delay has on the event as a whole. For Campfire San Jose, both of our day-of schedules included an hour of delay buffer for the inevitable case that a mini-event runs behind schedule, and this proved extremely useful. On the first day, our primary schedule ended perfectly on time with everyone out of the building by 8. However, we did underestimate potential delays on the second day, when the actual voting and prize ceremony takes place. But while the final closing ceremony was a bit rushed, no events were cut due to delays and we exited the building on time both days. Simply by anticipating issues ahead of time and having a margin of error, we were able to reduce a potential hours-long delay down to just the final closing ceremony. And no, this isn’t an exaggeration. A campfire event in another location ended three hours behind schedule when their venue finally kicked them out. "
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Single",
+          "layout": "single",
+          "figures": [
+            {
+              "src": "/images/blog/peer-voting-flaws/vikinghacks.jpg",
+              "alt": "Hackathon participants standing near a presentation area.",
+              "caption": "A single hero-style image works well when one photo should carry the section."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Multiple Side by Side",
+          "layout": "grid",
+          "figures": [
+            {
+              "src": "/images/partnerships/campfire-san-jose/opening.JPG",
+              "alt": "Opening presentation at Campfire San Jose.",
+              "caption": "Opening talk"
+            },
+            {
+              "src": "/images/partnerships/campfire-san-jose/trophies.JPG",
+              "alt": "Trophies lined up on a table.",
+              "caption": "Awards table"
+            },
+            {
+              "src": "/images/partnerships/campfire-san-jose/winners.JPG",
+              "alt": "Winners standing together after the event.",
+              "caption": "Closing photo"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Image: Carousel",
+          "layout": "carousel",
+          "figures": [
+            {
+              "src": "/images/products/openagv/gallery-1.svg",
+              "alt": "First OpenAGV product visual.",
+              "caption": "Slide 1"
+            },
+            {
+              "src": "/images/products/openagv/gallery-2.svg",
+              "alt": "Second OpenAGV product visual.",
+              "caption": "Slide 2"
+            },
+            {
+              "src": "/images/products/openagv/gallery-3.svg",
+              "alt": "Third OpenAGV product visual.",
+              "caption": "Slide 3"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "title": "Charts",
+          "figures": [
+            {
+              "chartType": "bar",
+              "title": "Bar",
+              "description": "Projects launched by quarter.",
+              "data": [
+                {
+                  "label": "Q1",
+                  "value": 4
+                },
+                {
+                  "label": "Q2",
+                  "value": 7
+                },
+                {
+                  "label": "Q3",
+                  "value": 5
+                },
+                {
+                  "label": "Q4",
+                  "value": 9
+                }
+              ]
+            },
+            {
+              "chartType": "line",
+              "title": "Line",
+              "description": "Weekly traffic after a homepage refresh.",
+              "data": [
+                {
+                  "label": "Mon",
+                  "value": 120
+                },
+                {
+                  "label": "Tue",
+                  "value": 168
+                },
+                {
+                  "label": "Wed",
+                  "value": 156
+                },
+                {
+                  "label": "Thu",
+                  "value": 198
+                },
+                {
+                  "label": "Fri",
+                  "value": 244
+                }
+              ]
+            },
+            {
+              "chartType": "pie",
+              "title": "Pie",
+              "description": "Where demo requests came from.",
+              "unit": "%",
+              "data": [
+                {
+                  "label": "Blog",
+                  "value": 42
+                },
+                {
+                  "label": "Events",
+                  "value": 24
+                },
+                {
+                  "label": "Partners",
+                  "value": 18
+                },
+                {
+                  "label": "Direct",
+                  "value": 16
+                }
+              ]
+            },
+            {
+              "chartType": "scatter",
+              "title": "Scatter",
+              "description": "Response time versus signup conversion.",
+              "xLabel": "Latency (ms)",
+              "yLabel": "Signup rate (%)",
+              "points": [
+                {
+                  "label": "A",
+                  "x": 120,
+                  "y": 4.8
+                },
+                {
+                  "label": "B",
+                  "x": 180,
+                  "y": 4.3
+                },
+                {
+                  "label": "C",
+                  "x": 240,
+                  "y": 3.9
+                },
+                {
+                  "label": "D",
+                  "x": 310,
+                  "y": 3.4
+                }
+              ]
+            },
+            {
+              "chartType": "table",
+              "title": "Table",
+              "description": "Campaign snapshot in table form.",
+              "columns": [
+                "Channel",
+                "CTR",
+                "Signups"
+              ],
+              "rows": [
+                [
+                  "Homepage",
+                  "5.8%",
+                  "128"
+                ],
+                [
+                  "Blog",
+                  "4.1%",
+                  "72"
+                ],
+                [
+                  "Events",
+                  "7.2%",
+                  "43"
+                ]
+              ]
+            },
+            {
+              "chartType": "radar",
+              "title": "Radar",
+              "description": "How the launch scored across six dimensions.",
+              "max": 10,
+              "data": [
+                {
+                  "label": "Speed",
+                  "value": 8
+                },
+                {
+                  "label": "Polish",
+                  "value": 9
+                },
+                {
+                  "label": "Clarity",
+                  "value": 7
+                },
+                {
+                  "label": "Reach",
+                  "value": 6
+                },
+                {
+                  "label": "Depth",
+                  "value": 8
+                },
+                {
+                  "label": "Retention",
+                  "value": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "figures": [
+            {
+              "quote": "A flexible publishing system should let the content decide the layout, not the other way around.",
+              "attribution": "Magma Labs",
+              "role": "Content system note"
+            }
+          ]
+        },
+        {
+          "type": "link-embed",
+          "title": "Link Embed",
+          "figures": [
+            {
+              "url": "https://hackclub.com",
+              "label": "Hack Club",
+              "description": "A community reference that often appears in Magma Labs event and hackathon discussions.",
+              "site": "Community"
+            },
+            {
+              "url": "https://itch.io/jam/gmtk-game-jam",
+              "label": "GMTK Game Jam",
+              "description": "An example of a large event where judging format and submission scale both matter.",
+              "site": "Event"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Timeline",
+          "figures": [
+            {
+              "time": "09:00",
+              "title": "Kickoff",
+              "description": "The post structure was switched from section-only prose to reusable content cards.",
+              "image": {
+                "src": "/images/events/labs-day-26.png",
+                "alt": "Poster for Labs Day 26.",
+                "caption": "Initial launch point"
+              }
+            },
+            {
+              "time": "13:30",
+              "title": "Media pass",
+              "description": "Images and visual blocks were added so the article could show evidence instead of only describing it.",
+              "image": {
+                "src": "/images/events/campfire-sj.jpg",
+                "alt": "Campfire San Jose event photo.",
+                "caption": "Adding visual proof"
+              }
+            },
+            {
+              "time": "18:00",
+              "title": "Wrap-up",
+              "description": "The example post finished with charts, embeds, and structured Q and A blocks to prove the full system end to end.",
+              "image": {
+                "src": "/images/awards/showcase-certificate.png",
+                "alt": "Showcase certificate image.",
+                "caption": "Final review"
+              }
+            }
+          ]
+        },
+        {
+          "type": "qa",
+          "title": "Q and A",
+          "figures": [
+            {
+              "question": "Do older posts need to be rewritten immediately?",
+              "answer": "No. Older section-based content is converted into text cards automatically, so existing posts keep working."
+            },
+            {
+              "question": "Can one post mix multiple figure types in one article?",
+              "answer": "Yes. The showcase above combines prose, images, charts, stats, quotes, comparisons, embeds, a timeline, and Q and A in a single post."
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "showcase",
+        "blog",
+        "design",
+        "cards"
+      ],
+      "writtenAt": "2026-05-13",
+      "updatedAt": "2026-05-13",
+      "readMinutes": 8,
+      "citations": [
+        {
+          "label": "Hack Club",
+          "url": "https://hackclub.com"
+        },
+        {
+          "label": "GMTK Game Jam",
+          "url": "https://itch.io/jam/gmtk-game-jam"
+        }
+      ]
+    }
+  ]
+}

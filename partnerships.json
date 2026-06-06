@@ -1,0 +1,29 @@
+{
+  "partnerships": [
+        
+    {
+      "id": "campfire-san-jose",
+      "visibility": true,
+      "name": "Campfire San Jose",
+      "summary": "",
+      "description": "A 40 person beginner friendly game jam in the Bay Area.",
+      "images": {
+        "icon": "",
+        "thumbnail": "/images/partnerships/campfire-san-jose/group-pic.jpg",
+        "gallery": [
+          "/images/partnerships/campfire-san-jose/opening.JPG",
+          "/images/partnerships/campfire-san-jose/trophies.JPG",
+          "/images/partnerships/campfire-san-jose/winners.JPG"
+        ]
+      },
+      "highlights": [
+        "Largest West Coast event at 40 participants",
+        "$5000+ funds raised with a $2000+ prize pool",
+        "6 engaging workshops covering all aspects of game development"
+      ],
+      "tags": ["gamedev", "events", "ux", "hackclub"],
+      "partneredAt": "2026-02-28",
+      "updatedAt": "2026-03-01"
+    }
+  ]
+}

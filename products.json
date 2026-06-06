@@ -1,0 +1,145 @@
+{
+  "products": [
+    {
+      "id": "assembled",
+      "visibility": false,
+      "name": "Assembled",
+      "summary": "A feature complete robotics game simulator, coming to a kickoff near you.",
+      "description": "A feature complete robotics game simulator, coming to a kickoff near you.",
+      "images": {
+        "icon": "/images/products/assembled/icon.svg",
+        "thumbnail": "/images/products/assembled/thumbnail.svg",
+        "gallery": [
+          "/images/products/assembled/gallery-1.svg",
+          "/images/products/assembled/gallery-2.svg",
+          "/images/products/assembled/gallery-3.svg"
+        ]
+      },
+      "features": [
+        "Simulate thousands of robotics matches instantly",
+        "Explore robot archetypes faster than ever",
+        "Compatible with 90% of FRC, FTC, and V5RC games"
+      ],
+      "tags": ["robotics", "frc", "ftc", "v5rc", "unity", "simulation"],
+      "releasedAt": "2027-01-01",
+      "updatedAt": "2027-01-01"
+    },
+    
+    {
+      "id": "openagv",
+      "visibility": false,
+      "name": "OpenAGV",
+      "summary": "A high speed point-to-point item transportations system for your makerspace.",
+      "description": "A high speed point-to-point item transportations system for your makerspace.",
+      "images": {
+        "icon": "/images/products/openagv/icon.svg",
+        "thumbnail": "/images/products/openagv/thumbnail.svg",
+        "gallery": [
+          "/images/products/openagv/gallery-1.svg",
+          "/images/products/openagv/gallery-2.svg",
+          "/images/products/openagv/gallery-3.svg"
+        ]
+      },
+      "tags": ["robotics", "frc", "hardware", "cad"],
+      "releasedAt": "2026-08-02",
+      "updatedAt": "2026-08-02"
+    },
+        {
+      "id": "ecp",
+      "visibility": true,
+      "name": "Event Control Panel",
+      "summary": "A self contained unified event A/V app for easy slides, music, and announcements",
+      "description": "A self contained unified event A/V app for easy slides, music, and announcements",
+      "images": {
+        "icon": "/images/products/ecp/thumbnail.png",
+        "thumbnail": "/images/products/ecp/thumbnail.png"
+      },
+      "tags": ["events", "html", "css", "javascript"],
+      "demoUrl": "/ecp/",
+      "repoUrl": "https://github.com/MagmaSpeedCubes/event-control-panel",
+      "releasedAt": "2026-05-26",
+      "updatedAt": "2026-05-26"
+    },
+
+    {
+      "id": "resolve",
+      "visibility": false,
+      "name": "Resolve Made Easy",
+      "summary": "A full scale mockup of DaVinci Resolve full of tooltips",
+      "description": "A full scale mockup of DaVinci Resolve full of tooltips",
+      "images": {
+        "icon": "/images/products/openagv/icon.svg",
+        "thumbnail": "/images/products/openagv/thumbnail.svg",
+        "gallery": [
+          "/images/products/openagv/gallery-1.svg",
+          "/images/products/openagv/gallery-2.svg",
+          "/images/products/openagv/gallery-3.svg"
+        ]
+      },
+      "tags": ["video-production", "html", "css", "javascript"],
+      "demoUrl": "https://resolve.magmalabs.dev/", 
+      "repoUrl": "https://github.com/MagmaSpeedCubes/event-control-panel",
+      "releasedAt": "2026-05-25",
+      "updatedAt": "2026-05-26"
+    },
+
+    {
+      "id": "folding-fury",
+      "visibility": true,
+      "name": "Folding Fury",
+      "summary": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
+      "description": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
+      "images": {
+        "icon": "/images/products/folding-fury/shuriken-0.png",
+        "thumbnail": "/images/products/folding-fury/tn.png",
+        "gallery": [
+          "/images/products/folding-fury/prologue.png",
+          "/images/products/folding-fury/ingame.png",
+          "/images/products/folding-fury/death.png"
+        ]
+      },
+      "demoUrl": "https://bffwouj3472.itch.io/folding-fury",
+      "repoUrl": "https://github.com/MagmaSpeedCubes/folding-fury",
+      "tags": ["gamedev","unity", "coding"],
+      "releasedAt": "2025-05-28",
+      "updatedAt": "2025-05-28"
+    },
+    {
+      "id": "youtube-channel",
+      "visibility": true,
+      "name": "Magma Labs Youtube Channel",
+      "summary": "A youtube channel showcasing the projects of Magma Labs",
+      "description": "A youtube channel showcasing the projects of Magma Labs",
+      "images": {
+        "icon": "/logo.svg",
+        "thumbnail": "/images/products/youtube-channel/frontpage.png",
+        "gallery": [
+        ]
+      },
+      "demoUrl": "https://www.youtube.com/@magmalabs3472",
+      "tags": ["math","coding", "cubing", "cad", "urbanism", "video-production"],
+      "releasedAt": "2015-03-20",
+      "updatedAt": "2026-03-29"
+    },
+    {
+      "id": "personal-website",
+      "visibility": true,
+      "name": "Magma Labs Website",
+      "summary": "The Magma Labs Website, with projects and blogs",
+      "description": "The Magma Labs Website, with projects and blogs",
+      "images": {
+        "icon": "/logo.svg",
+        "thumbnail": "/images/products/personal-website/frontpage.png",
+        "gallery": [
+        ]
+      },
+      "features": [
+      ],
+      "demoUrl": "https://magmalabs.dev/", 
+      "repoUrl": "https://github.com/MagmaSpeedCubes/magmalabs.dev",
+      "tags": ["html", "css", "graphic-design"],
+      "releasedAt": "2024-08-02",
+      "updatedAt": "2026-04-27"
+    }
+  ]
+}

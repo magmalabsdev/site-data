@@ -1,0 +1,25 @@
+{ "awards": 
+
+[ 
+{ "name": "Silver Medal", "competition": "Math League Middle School Competition", "issuedAt": "2023-10-23", "url": "https://www.mathleague.org/", "image": "/images/awards/mathleague-medal.png" } ,
+{ "name": "AIME Qualifier", "competition": "2023 AMC 10B", "issuedAt": "2023-11-14", "url": "https://maa.org/maa-invitational-competitions/", "image": "/images/awards/maa-logo.webp" } ,
+{ "name": "Participant", "competition": "2024 MATHCOUNTS Central Santa Clara Valley Chapter Competition", "issuedAt": "2024-2-21", "url": "https://www.mathcounts.org/programs/chapter-state-competition-search", "image": "/images/awards/mathcounts-certificate.png" } ,
+{ "name": "Team Fourth Place", "competition": "2024 MATHCOUNTS Central Santa Clara Valley Chapter Competition", "issuedAt": "2024-2-21", "url": "https://www.mathcounts.org/programs/chapter-state-competition-search", "image": "/images/awards/mathcounts-trophy.png" } ,
+{ "name": "11th Place", "competition": "Artichoke Invitational (Freshman)", "issuedAt": "2024-10-5", "url": "https://www.athletic.net/CrossCountry/meet/237691/results/950131", "image": "/images/awards/artichoke-medal.png" } ,
+{ "name": "48th Place", "competition": "41st P.Wilder Mariner XC Invitational (F/S)", "issuedAt": "2024-10-19", "url": "https://www.athletic.net/CrossCountry/meet/243248/results/999313", "image": "/images/awards/mariner-medal.png" } ,
+{ "name": "15th Place", "competition": "Lynbrook Invite/FUHSD XC Championships (F/S)", "issuedAt": "2024-10-31", "url": "https://www.athletic.net/CrossCountry/meet/237686/results/950097", "image": "/images/awards/lynbrook-medal.png" } ,
+{ "name": "Participant", "competition": "CIF Central Coast Section Cross Country Championships (Division 2)", "issuedAt": "2024-11-16", "url": "https://www.cifccs.org/landing/index", "image": "/images/awards/ccs-certificate.png" } ,
+{ "name": "Most Improved", "competition": "Cupertino High School Cross Country", "issuedAt": "2024-12-14", "url": "https://tinorunners.org/", "image": "/images/awards/most-improved.png" } ,
+{ "name": "Varsity Letter", "competition": "Cupertino High School Cross Country", "issuedAt": "2024-12-14", "url": "https://tinorunners.org/", "image": "/images/awards/chs-varsity-letter.png" } ,
+{ "name": "AIME Qualifier", "competition": "2024 AMC 10B", "issuedAt": "2024-11-12", "url": "https://maa.org/maa-invitational-competitions/", "image": "/images/awards/maa-logo.webp" } ,
+{ "name": "First Place - Educational Technology", "competition": "Viking Hacks 2025", "issuedAt": "2025-02-16", "url": "https://www.vikinghacks.com/", "image": "/images/awards/vikinghacks-win.png" } ,
+{ "name": "First Place", "competition": "GDC Showcase", "issuedAt": "2025-05-28", "url": "https://gamedevclub.tech/", "image": "/images/awards/showcase-certificate.png" } ,
+{ "name": "Standard Qualifier", "competition": "Shipwrecked", "issuedAt": "2025-08-08", "url": "https://shipwrecked.hackclub.com/", "image": "/images/awards/shipwrecked-postcard.png" } ,
+{ "name": "5th Place", "competition": "Firebird XC Invitational (F/S)", "issuedAt": "2025-9-9", "url": "https://www.athletic.net/CrossCountry/meet/261406/results/1037813", "image": "/images/awards/firebird-sticker.png" } ,
+{ "name": "Qualifier", "competition": "Campfire Flagship", "issuedAt": "2026-02-20", "url": "https://flagship.hackclub.com/", "image": "/images/awards/flagship-keychain.png" } ,
+{ "name": "Most Features", "competition": "Campfire Flagship", "issuedAt": "2026-02-22", "url": "https://flagship.hackclub.com/", "image": "/images/awards/flagship-streamdeck.png" } ,
+{ "name": "FRC 2473 - Team Sustainability Award sponsored by Dow", "competition": "CA District East Bay Event", "issuedAt": "2026-04-04", "url": "https://frc-events.firstinspires.org/2026/team/2473", "image": "/images/awards/frc2473-eastbay.png" }
+
+
+] }
+
