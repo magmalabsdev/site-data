@@ -56,7 +56,7 @@
       },
       "tags": ["events", "html", "css", "javascript"],
       "demoUrl": "/ecp/",
-      "repoUrl": "https://github.com/MagmaSpeedCubes/event-control-panel",
+      "repoUrl": "https://github.com/magmalabsdev/event-control-panel",
       "releasedAt": "2026-05-26",
       "updatedAt": "2026-05-26"
     },
@@ -78,7 +78,7 @@
       },
       "tags": ["video-production", "html", "css", "javascript"],
       "demoUrl": "https://resolve.magmalabs.dev/", 
-      "repoUrl": "https://github.com/MagmaSpeedCubes/event-control-panel",
+      "repoUrl": "https://github.com/magmalabsdev/event-control-panel",
       "releasedAt": "2026-05-25",
       "updatedAt": "2026-05-26"
     },
@@ -99,7 +99,7 @@
         ]
       },
       "demoUrl": "https://bffwouj3472.itch.io/folding-fury",
-      "repoUrl": "https://github.com/MagmaSpeedCubes/folding-fury",
+      "repoUrl": "https://github.com/magmalabsdev/folding-fury",
       "tags": ["gamedev","unity", "coding"],
       "releasedAt": "2025-05-28",
       "updatedAt": "2025-05-28"
@@ -111,7 +111,7 @@
       "summary": "A youtube channel showcasing the projects of Magma Labs",
       "description": "A youtube channel showcasing the projects of Magma Labs",
       "images": {
-        "icon": "/logo.svg",
+        "icon": "https://magmalabsdev.github.io/site-data/logo.svg",
         "thumbnail": "/images/products/youtube-channel/frontpage.png",
         "gallery": [
         ]
@@ -128,7 +128,7 @@
       "summary": "The Magma Labs Website, with projects and blogs",
       "description": "The Magma Labs Website, with projects and blogs",
       "images": {
-        "icon": "/logo.svg",
+        "icon": "https://magmalabsdev.github.io/site-data/logo.svg",
         "thumbnail": "/images/products/personal-website/frontpage.png",
         "gallery": [
         ]
@@ -136,7 +136,7 @@
       "features": [
       ],
       "demoUrl": "https://magmalabs.dev/", 
-      "repoUrl": "https://github.com/MagmaSpeedCubes/magmalabs.dev",
+      "repoUrl": "https://github.com/magmalabsdev/magmalabs.dev",
       "tags": ["html", "css", "graphic-design"],
       "releasedAt": "2024-08-02",
       "updatedAt": "2026-04-27"

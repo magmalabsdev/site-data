@@ -4,7 +4,7 @@
       "href": "/",
       "ariaLabel": "Magma Labs home",
       "logo": {
-        "src": "/logo.svg",
+        "src": "https://magmalabsdev.github.io/site-data/logo.svg",
         "alt": "Magma Labs logo",
         "width": 34,
         "height": 34
@@ -32,7 +32,7 @@
       "href": "/",
       "ariaLabel": "Magma Labs home",
       "logo": {
-        "src": "/logo.svg",
+        "src": "https://magmalabsdev.github.io/site-data/logo.svg",
         "alt": "",
         "width": 34,
         "height": 34
