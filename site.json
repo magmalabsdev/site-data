@@ -39,7 +39,7 @@
         "links": [
           { "label": "Home", "href": "/" },
           { "label": "Team", "href": "/team/" },
-          { "label": "Films", "href": "/films/" },
+          { "label": "Films", "href": "https://films.magmalabs.dev/" },
           { "label": "Contact", "href": "/#contact", "hrefHome": "#contact" }
         ]
       },
