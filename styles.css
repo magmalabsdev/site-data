@@ -216,7 +216,6 @@ a {
 
 .nav a[aria-current="page"] {
   color: var(--accent-800);
-  background: var(--accent-soft);
 }
 
 .nav-toggle {
@@ -686,27 +685,24 @@ a {
 
 .project-banner {
   display: grid;
-  gap: 0;
-  overflow: hidden;
-  border-radius: 28px;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
-  box-shadow: var(--shadow-md);
-  transition: transform 140ms var(--ease), box-shadow 140ms var(--ease),
-    border-color 140ms var(--ease);
+  gap: 14px;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
 }
 
 .project-banner:hover,
 .project-banner:focus-within {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(182, 165, 238, 0.9);
+  transform: scale(1.02);
 }
 
 .project-banner-media {
   display: block;
   min-height: 220px;
+  border-radius: var(--radius);
+  overflow: hidden;
   background: linear-gradient(180deg, rgba(106, 61, 176, 0.14), rgba(255, 255, 255, 0));
 }
 
@@ -747,7 +743,7 @@ a {
   display: grid;
   gap: 14px;
   align-content: center;
-  padding: 20px;
+  padding: 16px 0 0;
 }
 
 .project-banner-title {
@@ -927,21 +923,18 @@ a {
 }
 
 .event-banner {
-  border-radius: var(--radius);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
   display: grid;
-  gap: 0;
-  transition: transform 140ms var(--ease), box-shadow 140ms var(--ease),
-    border-color 140ms var(--ease);
+  gap: 14px;
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
 }
 
-.event-banner:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(182, 165, 238, 0.9);
+.event-banner:hover,
+.event-banner:focus-within {
+  transform: scale(1.02);
 }
 
 .event-banner:focus-visible {
@@ -950,6 +943,8 @@ a {
 }
 
 .event-banner-media {
+  border-radius: var(--radius);
+  overflow: hidden;
   background: linear-gradient(180deg, rgba(106, 61, 176, 0.10), rgba(255, 255, 255, 0));
 }
 
@@ -962,7 +957,7 @@ a {
 }
 
 .event-banner-body {
-  padding: 18px;
+  padding: 16px 0 0;
   display: grid;
   gap: 10px;
 }
@@ -1030,8 +1025,9 @@ a {
 }
 
 .product-thumb {
-  margin: -18px -18px 14px;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  margin: 0 0 14px;
+  border-radius: var(--radius);
+  overflow: hidden;
   background: linear-gradient(180deg, rgba(106, 61, 176, 0.10), rgba(255, 255, 255, 0));
 }
 
@@ -2086,19 +2082,47 @@ a {
   border-radius: 16px;
   border: 1px solid rgba(226, 232, 240, 0.95);
   background: rgba(255, 255, 255, 0.9);
-  transition: transform 140ms var(--ease), box-shadow 140ms var(--ease),
-    border-color 140ms var(--ease);
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
 }
 
-.blog-link-card:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
-  border-color: var(--accent-100);
+.blog-link-card:hover,
+.blog-link-card:focus-within {
+  transform: scale(1.02);
 }
 
 .blog-link-card:focus-visible {
   outline: 3px solid var(--accent-200);
   outline-offset: 2px;
+}
+
+/* No nested rounded corners: flatten the .card-based content cards to the award
+   pattern — transparent box, the image/thumbnail/avatar carries the rounded
+   frame, text/buttons sit on a flat area. (Excludes the full post-page view.) */
+.product-card,
+.partnership-card,
+.team-card,
+.post-card:not(.post-page) {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
+}
+
+/* Clickable content cards expand slightly on hover (awards keep their own). */
+.product-card:hover,
+.product-card:focus-within,
+.partnership-card:hover,
+.partnership-card:focus-within,
+.team-card:hover,
+.team-card:focus-within,
+.post-card:not(.post-page):hover,
+.post-card:not(.post-page):focus-within {
+  transform: scale(1.02);
 }
 
 .blog-link-site {

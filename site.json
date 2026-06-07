@@ -18,13 +18,7 @@
       { "label": "Events", "href": "https://events.magmalabs.dev/" },
       { "label": "Awards", "href": "/awards/" },
       { "label": "Blog", "href": "/blog/", "currentFor": ["blog", "post"] },
-      { "label": "Team", "href": "/team/" },
-      {
-        "label": "Contact",
-        "href": "/#contact",
-        "hrefHome": "#contact",
-        "desktopClass": "btn small secondary"
-      }
+      { "label": "Team", "href": "/team/" }
     ]
   },
   "footer": {

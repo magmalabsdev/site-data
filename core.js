@@ -44,6 +44,22 @@
     return PUBLISHED_HOSTS.has(getCurrentHostname());
   }
 
+  // True only on a local development host. Used to gate dev-only tools (e.g. the
+  // blog builder) so they stay hidden on every deployed host, known or not.
+  function isLocalHost() {
+    const host = getCurrentHostname();
+    return (
+      host === "localhost" ||
+      host === "127.0.0.1" ||
+      host === "0.0.0.0" ||
+      host === "[::1]" ||
+      host === "::1" ||
+      host === "" ||
+      host.endsWith(".local") ||
+      host.endsWith(".localhost")
+    );
+  }
+
   function isCurrentLink(link, href, currentPage) {
     if (Array.isArray(link?.currentFor) && link.currentFor.includes(currentPage)) {
       return true;
@@ -323,13 +339,7 @@
         { label: "Events", href: "https://events.magmalabs.dev/" },
         { label: "Awards", href: "/awards/" },
         { label: "Blog", href: "/blog/", currentFor: ["blog", "post"] },
-        { label: "Team", href: "/team/" },
-        {
-          label: "Contact",
-          href: "/#contact",
-          hrefHome: "#contact",
-          desktopClass: "btn small secondary"
-        }
+        { label: "Team", href: "/team/" }
       ]
     },
     footer: {
@@ -434,6 +444,7 @@
     copyToClipboard,
     getCurrentPage,
     getCurrentHostname,
-    isPublishedSite
+    isPublishedSite,
+    isLocalHost
   };
 })();

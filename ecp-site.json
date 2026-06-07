@@ -8,8 +8,7 @@
     },
     "links": [
       { "label": "ECP", "href": "/" },
-      { "label": "Magma Labs", "href": "https://magmalabs.dev/" },
-      { "label": "Contact", "href": "https://magmalabs.dev/#contact", "desktopClass": "btn small secondary" }
+      { "label": "Magma Labs", "href": "https://magmalabs.dev/" }
     ]
   },
   "footer": {
