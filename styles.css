@@ -689,13 +689,6 @@ a {
   overflow: visible;
   border-radius: 0;
   background: transparent;
-  transition: transform 140ms var(--ease);
-  transform-origin: center;
-}
-
-.project-banner:hover,
-.project-banner:focus-within {
-  transform: scale(1.02);
 }
 
 .project-banner-media {
@@ -704,6 +697,13 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   background: linear-gradient(180deg, rgba(106, 61, 176, 0.14), rgba(255, 255, 255, 0));
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
+}
+
+.project-banner-media:hover,
+.project-banner-media:focus-within {
+  transform: scale(1.02);
 }
 
 .project-banner-media:focus-visible {
@@ -928,13 +928,6 @@ a {
   overflow: visible;
   display: grid;
   gap: 14px;
-  transition: transform 140ms var(--ease);
-  transform-origin: center;
-}
-
-.event-banner:hover,
-.event-banner:focus-within {
-  transform: scale(1.02);
 }
 
 .event-banner:focus-visible {
@@ -1561,6 +1554,17 @@ a {
   outline-offset: 2px;
 }
 
+.post-thumb-link {
+  display: block;
+  transition: transform 140ms var(--ease);
+  transform-origin: center;
+}
+
+.post-thumb-link:hover,
+.post-thumb-link:focus-within {
+  transform: scale(1.02);
+}
+
 .post-page {
   max-width: 980px;
   margin: 0 auto;
@@ -2109,20 +2113,6 @@ a {
   border-radius: 0;
   padding: 0;
   overflow: visible;
-  transition: transform 140ms var(--ease);
-  transform-origin: center;
-}
-
-/* Clickable content cards expand slightly on hover (awards keep their own). */
-.product-card:hover,
-.product-card:focus-within,
-.partnership-card:hover,
-.partnership-card:focus-within,
-.team-card:hover,
-.team-card:focus-within,
-.post-card:not(.post-page):hover,
-.post-card:not(.post-page):focus-within {
-  transform: scale(1.02);
 }
 
 .blog-link-site {
