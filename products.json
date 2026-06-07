@@ -55,7 +55,7 @@
         "thumbnail": "/images/products/ecp/thumbnail.png"
       },
       "tags": ["events", "html", "css", "javascript"],
-      "demoUrl": "/ecp/",
+      "demoUrl": "https://ecp.magmalabs.dev/",
       "repoUrl": "https://github.com/magmalabsdev/event-control-panel",
       "releasedAt": "2026-05-26",
       "updatedAt": "2026-05-26"
