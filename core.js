@@ -1,7 +1,7 @@
 (function () {
-  // Content JSON + stylesheet live in the site-data submodule, served from its
-  // own GitHub Pages. All data fetches below load from this base URL.
-  const SITE_DATA_BASE = "https://magmalabsdev.github.io/site-data";
+  // Content JSON + stylesheet live in the local site-data submodule, served from
+  // the site root. All data fetches below load from this base path.
+  const SITE_DATA_BASE = "/site-data";
 
   const toastEl = document.querySelector("[data-toast]");
   let toastTimer = null;
