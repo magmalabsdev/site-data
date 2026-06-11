@@ -205,17 +205,18 @@ a {
   color: var(--text-muted);
   font-weight: 600;
   padding: 8px 10px;
-  border-radius: 999px;
-  transition: background 160ms var(--ease), color 160ms var(--ease);
+  border-bottom: 2px solid transparent;
+  transition: color 160ms var(--ease), border-color 160ms var(--ease);
 }
 
 .nav a:hover {
-  background: var(--accent-soft);
   color: var(--accent-800);
+  border-bottom-color: var(--accent-600);
 }
 
 .nav a[aria-current="page"] {
   color: var(--accent-800);
+  border-bottom-color: var(--accent-600);
 }
 
 .nav-toggle {
@@ -297,7 +298,7 @@ a {
   justify-content: center;
   gap: 10px;
   padding: 12px 16px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid var(--accent-500);
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -314,8 +315,9 @@ a {
 }
 
 .btn.primary:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background: var(--accent-50);
+  color: var(--accent-800);
+  border-color: var(--accent-100);
 }
 
 .btn.secondary {
@@ -324,8 +326,9 @@ a {
 }
 
 .btn.secondary:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(180deg, var(--accent-600), var(--accent-700));
+  color: #fff;
+  border-color: var(--accent-700);
 }
 
 .btn.ghost {
@@ -335,8 +338,9 @@ a {
 }
 
 .btn.ghost:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent-100);
+  background: linear-gradient(180deg, var(--accent-600), var(--accent-700));
+  color: #fff;
+  border-color: var(--accent-700);
 }
 
 .btn.info {
@@ -367,14 +371,16 @@ a {
 .btn.success:hover,
 .btn.warning:hover,
 .btn.danger:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+  background: linear-gradient(180deg, var(--accent-600), var(--accent-700));
+  color: #fff;
+  border-color: var(--accent-700);
 }
 
 .btn.small {
   padding: 9px 12px;
   font-weight: 700;
   box-shadow: none;
+  border-radius: 5px;
 }
 
 .btn:disabled {
