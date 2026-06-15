@@ -47,6 +47,7 @@
         {
       "id": "ecp",
       "visibility": true,
+      "isFeatured": true,
       "name": "Event Control Panel",
       "summary": "A self contained unified event A/V app for easy slides, music, and announcements",
       "description": "A self contained unified event A/V app for easy slides, music, and announcements",
@@ -86,6 +87,7 @@
     {
       "id": "folding-fury",
       "visibility": true,
+      "isFeatured": true,
       "name": "Folding Fury",
       "summary": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
       "description": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
@@ -107,6 +109,7 @@
     {
       "id": "youtube-channel",
       "visibility": true,
+      "isFeatured": true,
       "name": "Magma Labs Youtube Channel",
       "summary": "A youtube channel showcasing the projects of Magma Labs",
       "description": "A youtube channel showcasing the projects of Magma Labs",

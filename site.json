@@ -60,5 +60,90 @@
       }
     ],
     "fineprint": "© {year} Magma Labs. All rights reserved."
+  },
+  "home": {
+    "subsites": [
+      {
+        "eyebrow": "Events",
+        "title": "Run Your Next Event With Us",
+        "cta": "Explore events",
+        "href": "https://events.magmalabs.dev/",
+        "image": "/images/events/labs-day-26.png"
+      },
+      {
+        "eyebrow": "Resources",
+        "title": "Guides, Docs & How-Tos",
+        "cta": "Visit archive",
+        "href": "https://archive.magmalabs.dev/",
+        "image": "/images/products/personal-website/frontpage.png"
+      },
+      {
+        "eyebrow": "Films",
+        "title": "Original Films & Production",
+        "cta": "Watch films",
+        "href": "https://films.magmalabs.dev/",
+        "image": "/images/products/folding-fury/prologue.png"
+      },
+      {
+        "eyebrow": "YouTube",
+        "title": "Builds, Tutorials & More",
+        "cta": "Subscribe",
+        "href": "https://www.youtube.com/@magmalabs3472",
+        "image": "/images/products/youtube-channel/frontpage.png"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hardware",
+        "blurb": "Robots, AGVs, and physical builds.",
+        "tag": "hardware",
+        "href": "/products/?tag=hardware",
+        "image": "/images/products/openagv/thumbnail.svg"
+      },
+      {
+        "label": "Game Dev",
+        "blurb": "Games made in Unity and beyond.",
+        "tag": "gamedev",
+        "href": "/products/?tag=gamedev",
+        "image": "/images/products/folding-fury/ingame.png"
+      },
+      {
+        "label": "Films",
+        "blurb": "Short films and video production.",
+        "href": "https://films.magmalabs.dev/",
+        "image": "/images/products/folding-fury/prologue.png"
+      },
+      {
+        "label": "Events",
+        "blurb": "Game jams, showcases, and meetups.",
+        "tag": "events",
+        "href": "/products/?tag=events",
+        "image": "/images/events/campfire-sj.jpg"
+      }
+    ],
+    "learn": [
+      {
+        "title": "Discover your opportunities",
+        "cta": "Learn more",
+        "href": "https://archive.magmalabs.dev/workshops/opportunities",
+        "image": "/images/products/personal-website/frontpage.png"
+      },
+      {
+        "title": "Explore Our Projects",
+        "cta": "Explore",
+        "href": "/products/",
+        "image": "/images/products/folding-fury/tn.png"
+      },
+      {
+        "title": "Run an event",
+        "cta": "Learn more",
+        "href": "https://ecp.magmalabs.dev/",
+        "image": "/images/events/campfire-sj.jpg"
+      }
+    ],
+    "videos": [
+      { "title": "My First Hackathon", "url": "https://www.youtube.com/watch?v=Rv_IxUD6ovg" },
+      { "title": "Hackathon on an island", "url": "https://www.youtube.com/watch?v=k52OTuOReDI" }
+    ]
   }
 }
