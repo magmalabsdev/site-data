@@ -101,6 +101,35 @@
     return a;
   }
 
+  // Desktop nav entry. Links flagged with `preview: "<source>"` render with a
+  // caret and an (initially empty) dropdown panel; script.js fills the panel
+  // on first hover/focus using that source. Plain links return a bare anchor.
+  function createNavItem(link, currentPage, isHomePage) {
+    const anchor = createNavLink(link, currentPage, isHomePage, { variant: "desktop" });
+    const preview = String(link?.preview || "").trim();
+    if (!preview) return anchor;
+
+    const caret = document.createElement("span");
+    caret.className = "nav-caret";
+    caret.setAttribute("aria-hidden", "true");
+    caret.innerHTML =
+      '<svg viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    anchor.appendChild(caret);
+
+    const item = document.createElement("div");
+    item.className = "nav-item has-dropdown";
+    item.appendChild(anchor);
+
+    const dropdown = document.createElement("div");
+    dropdown.className = "nav-dropdown";
+    dropdown.setAttribute("data-nav-preview", preview);
+    dropdown.setAttribute("role", "region");
+    dropdown.setAttribute("aria-label", `${String(link?.label || "").trim()} preview`);
+    item.appendChild(dropdown);
+
+    return item;
+  }
+
   function renderSiteHeader(host, config) {
     if (!host) return;
     host.textContent = "";
@@ -139,7 +168,7 @@
 
     const links = Array.isArray(config?.links) ? config.links : [];
     links.forEach((link) => {
-      nav.appendChild(createNavLink(link, currentPage, isHomePage, { variant: "desktop" }));
+      nav.appendChild(createNavItem(link, currentPage, isHomePage));
     });
 
     const toggle = document.createElement("button");
@@ -333,12 +362,10 @@
         text: "Magma Labs"
       },
       links: [
-        { label: "Home", href: "/" },
-        { label: "Projects", href: "/products/" },
-        { label: "Partnerships", href: "/partnerships/" },
+        { label: "Projects", href: "/products/", preview: "products" },
         { label: "Events", href: "https://events.magmalabs.dev/" },
-        { label: "Awards", href: "/awards/" },
-        { label: "Blog", href: "/blog/", currentFor: ["blog", "post"] },
+        { label: "Awards", href: "/awards/", preview: "awards" },
+        { label: "Blog", href: "/blog/", currentFor: ["blog", "post"], preview: "blog" },
         { label: "Team", href: "/team/" }
       ]
     },
@@ -399,6 +426,9 @@
         if (chromeFooterHost) renderSiteFooter(chromeFooterHost, chrome?.footer || DEFAULT_CHROME.footer);
         updateYear();
         initHeaderInteractions();
+        // Signal page scripts (script.js) that the nav exists so they can wire
+        // up dropdown previews against the freshly-rendered `[data-nav-preview]`.
+        document.dispatchEvent(new CustomEvent("magma:chrome-rendered"));
       });
   } else {
     updateYear();

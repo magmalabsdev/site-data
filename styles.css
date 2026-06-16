@@ -219,6 +219,162 @@ a {
   border-bottom-color: var(--accent-600);
 }
 
+/* ── Nav dropdown previews (mega-menu) ─────────────────────────────────── */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-caret {
+  display: inline-flex;
+  color: currentColor;
+  transition: transform 180ms var(--ease);
+}
+
+.nav-item:hover .nav-caret,
+.nav-item:focus-within .nav-caret {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: min(560px, calc(100vw - 32px));
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 160ms var(--ease), transform 160ms var(--ease),
+    visibility 160ms var(--ease);
+  z-index: 60;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Neutralize the shared `.nav a` link styling inside the dropdown. */
+.nav-dropdown a,
+.nav-dropdown a:hover {
+  padding: 0;
+  border: 0;
+  color: inherit;
+}
+
+.nav-preview-section {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-preview-heading {
+  margin: 0;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-600);
+}
+
+.nav-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.nav-dropdown .nav-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background 140ms var(--ease), border-color 140ms var(--ease);
+}
+
+.nav-dropdown .nav-preview-card:hover {
+  background: var(--accent-50);
+  border-color: var(--accent-100);
+}
+
+.nav-preview-media {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 42px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-muted);
+  display: grid;
+  place-items: center;
+}
+
+.nav-preview-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-preview-body {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.nav-preview-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-preview-sub {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-dropdown .nav-preview-footer {
+  justify-self: start;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-700);
+}
+
+.nav-dropdown .nav-preview-footer:hover {
+  color: var(--accent-500);
+}
+
+.nav-preview-empty {
+  margin: 0;
+  padding: 6px 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .nav-toggle {
   display: inline-flex;
   align-items: center;

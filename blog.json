@@ -416,6 +416,171 @@
       ]
     },
     {
+  "id": "quit-comp-math",
+  "visibility": true,
+  "title": "Why I Quit Competitive Math",
+  "summary": "My whole life in 2023, completely gone in 2026",
+  "images": {
+    "thumbnail": "images/blog/quit-comp-math/math-books.JPG"
+  },
+  "content": [
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "In 2023, competitive math was my entire academic life. My only extracurricular consisted of participating in my school's MATHCOUNTS team, taking the AMC 10 every year and hoping I qualify for AIME, and attending math classes on the side. But today, competitive math has been wiped from my existence. In fact, I haven't participated in a math extracurricular in nearly a year. How does something that was once my entire life completely disappear in the span of three years?"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The beginnings",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Ever since I was a kid, I had always had some interest in math. I remember distinctly playing with my grandmother's calculator, hitting x2 repeatedly and memorizing the powers of two up to 1048576. I memorized other numbers too, including my mom's library card number and pi to a hundred digits. In third grade math class, I was working on a multiplication problem where I was asked to multiply 24x26. I worked out the product by hand and I noticed that the result was exactly one smaller than 25x25. There was a similar problem on the homework where I was asked to multiply 16x14 and again, the product came out to be exactly one smaller than 15x15. By the third iteration, I had stopped computing the product altogether and switched fully to using the shortcut that I now know as the difference of squares."
+        },
+        {
+          "type": "paragraph",
+          "text": "My parents quickly picked up on my passion for math and being from a community where education came first, I took my first afterschool math olympiad class in fourth grade. Over the next few years, I took several math courses at several different math schools learning basic algebra, geometry, number theory, and probability."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sixth grade was the first time I participated in AMC. I took the AMC 8 and 10 and achieved the scores of 16 and 63 respectively. Sixth grade was also the first time I participated in my school's MATHCOUNTS program. Of the 30 students enrolled in the program, only I and three others were sixth graders, all three of whom I still have relationships with today. During sixth grade and the subsequent year, I participated in this program, learned additional concepts from online classes, and attempted the AMC every year."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "To qualify for AIME",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "In eighth grade, after skipping it the previous year, I decided to reattempt the AMC10. Looking at the previous contest scores on AoPS, I decided to aim for a score of 105 which would require answering 15 questions correctly and leaving the remainder blank, and I was achieving this score on practice tests. The day of the test comes and taking the test, I had time to answer 18 problems. When the results were posted online, I had achieved a score of 112.5, with 17 correct answers, a single incorrect answer, and seven omitted problems. Incidentally, 112.5 was the exact cutoff for the honor roll or top 5% on that problem set and my original goal of 105 was the exact AIME qualification cutoff. I took the AIME that year but didn't perform particularly well, earning a slightly below average score of 4. But by this point, a more systemic problem than scores began to rear its ugly head."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Dreaming to differ",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "I initially enjoyed math because of the discovery and problem solving aspect: Knowing the powers of two allowed me to easily calculate Minecraft stacks in my head. Knowing basic logic allowed me to beat puzzle games, starting with minesweeper and moving on to Tetris and then Baba is You. And noticing that two numbers differing by two multiplied out to be exactly one less than the average squared became a shortcut I abused on every third grade math homework assignment. Math 𝘸𝘢𝘴 a puzzle game."
+        },
+        {
+          "type": "paragraph",
+          "text": "In fact, as many concepts I learned in math classes, I discovered an equal or greater number on my own from reading books and solving problems. Applying the pattern from Pascal's Triangle gave me the solution to number-of-path problems and a shortcut to binomial expansion. A point on my initial AIME qualification can be attributed to discovering geometric probability. Even Markov chains, the very piece of math that powers AI today, I rederived on my own to solve probability problems. But one thing stayed the same: I participated in competitive math because I enjoyed it, not because it was good for college applications."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "From the endless grind",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The first time I qualified for AIME, this puzzle game version of math disappeared. Now that my talent in math was proven, I was expected to qualify for USAMO in high school which would supposedly earn me a guaranteed T20 admission. Discovering new and interesting facts became grinding mock tests for months to see a three point improvement. Learning one method to solve several problems became optimizing several methods to potentially solve one."
+        },
+        {
+          "type": "paragraph",
+          "text": "Interviews of previous USAMO qualifiers reveals that they devoted at a minimum of three hours a day, essentially a year round sport, to grinding math problems. Kevin Huang, a USAMO qualifier, dedicated three hours to math every weekday and eight hours on weekends, accounting for essentially all of his free time. I loved math, but what I don't love is solving the same problems for hours every day, day after day, month after month, just to potentially qualify for one competition. Couple that with my discovery of school clubs, cross country, and hackathons, and suddenly competitive math just wasn't that appealing anymore."
+        }
+      ]
+    },
+    {
+      "type": "big-number",
+      "figures": [
+        {
+          "title": "Hours on weekdays",
+          "stat": "3",
+          "description": "All remaining free time after school, homework, and sleep"
+        },
+        {
+          "title": "Hours on weekends",
+          "stat": "8",
+          "description": "Essentially the entire waking day"
+        },
+        {
+          "title": "Hours per week",
+          "stat": "31",
+          "description": "More than most sports. Nearly a full time job."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "I began to decrease my involvement in math starting second semester of ninth grade, and by the start of tenth, AMC was the only math competition I participated in, and I did so without preparation or expectations. Several of my friends from MATHCOUNTS continued competitive math into high school, but by their second failed JMO qualification, they had began to lose hope. To quote one of them, \"Its the most depressing [stuff] ever, you just gamble and then lose.\" It turns out, the reason USA(J)MO qualification is so prestigious is because of how difficult it is. There is no clean AMC -> AIME -> JMO path, the only JMO qualifier I know in my grade started competitive math in high school and my friends who started well before middle school haven't qualified."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "figures": [
+        {
+          "quote": "Its the most depressing [stuff] ever, you just gamble and then lose.",
+          "role": "Avid competitive math participant"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The rest of my life",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "If you observed my life three years ago, you would see me solving math problems in my free time. But if you observed my life today, you would find me building projects. Over my last year of not being involved in competitive math, I've learned Unity game development, Onshape CAD, DaVinci Resolve video editing, yearbook layout using Adobe Creatice Cloud, and many other creative tools. I've become the president of my school's Game Development Club, joined my school's FIRST robotics competition team, and lead organized a hackathon in the Bay Area, one with a 90% participant satisfaction rate, 20 points higher than the national average. But beyond everything else, I find personal projects emulate the \"discovery puzzle game\" feeling the best for a slew of reasons including"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Projects can vary significantly in scope, I can build a game in four hours or four months",
+            "Every project is unique and requires different skills from the ones before it",
+            "I can interact with the projects that I build way more than I feel connected with the problems I solve on paper",
+            "I can exercise my creative freedom in projects way more than in anything else",
+            "Projects can be paced based on how I am feeling, there is no \"I have to grind this so I can do well on that\""
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Competitive math kept me alive through middle school, the darkest time of my life, but personal projects allowed me to bring my ideas to life, from a simple tetris game to a full sized rail mounted vehicle. From my first hackathon to the flagship Shipwrecked hackathon on an island. Personal projects have taken me further in a year than competitive math ever has."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "layout": "single",
+      "figures": [
+        {
+          "src": "images/blog/quit-comp-math/sw-group-photo.png",
+          "caption": "The Shipwrecked Hackathon on an Island in the Boston Harbor. I am visible in the bottom left.",
+          "title": "Shipwrecked Hackathon"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "math",
+    "projects"
+  ],
+  "writtenAt": "2026-06-15",
+  "citations": [
+    {
+      "label": "Kevin Huang's USAMO Qualification",
+      "url": "https://www.ausd.net/apps/pages/index.jsp?uREC_ID=965712&type=d&pREC_ID=2677377"
+    },
+    {
+      "label": "AMC Historical Results",
+      "url": "https://artofproblemsolving.com/wiki/index.php/AMC_historical_results?srsltid=AfmBOoq0oXRqj8nV0eR4DnB3C8GQMSZ790xoeIlixc2ova_Sgn-bidIa#2023-2024"
+    }
+  ],
+  "readMinutes": 7
+},
+    {
       "id": "peer-voting-flaws",
       "visibility": true,
       "title": "The Flawed Nature of Peer Voting",

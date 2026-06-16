@@ -12,12 +12,10 @@
       "text": "Magma Labs"
     },
     "links": [
-      { "label": "Home", "href": "/" },
-      { "label": "Projects", "href": "/products/" },
-      { "label": "Partnerships", "href": "/partnerships/" },
+      { "label": "Projects", "href": "/products/", "preview": "products" },
       { "label": "Events", "href": "https://events.magmalabs.dev/" },
-      { "label": "Awards", "href": "/awards/" },
-      { "label": "Blog", "href": "/blog/", "currentFor": ["blog", "post"] },
+      { "label": "Awards", "href": "/awards/", "preview": "awards" },
+      { "label": "Blog", "href": "/blog/", "currentFor": ["blog", "post"], "preview": "blog" },
       { "label": "Team", "href": "/team/" }
     ]
   },
