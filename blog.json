@@ -421,7 +421,7 @@
   "title": "Why I Quit Competitive Math",
   "summary": "My whole life in 2023, completely gone in 2026",
   "images": {
-    "thumbnail": "images/blog/quit-comp-math/math-books.JPG"
+    "thumbnail": "/images/blog/quit-comp-math/math-books.JPG"
   },
   "content": [
     {
@@ -556,7 +556,7 @@
       "layout": "single",
       "figures": [
         {
-          "src": "images/blog/quit-comp-math/sw-group-photo.png",
+          "src": "/images/blog/quit-comp-math/sw-group-photo.png",
           "caption": "The Shipwrecked Hackathon on an Island in the Boston Harbor. I am visible in the bottom left.",
           "title": "Shipwrecked Hackathon"
         }
