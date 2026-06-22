@@ -1,0 +1,35 @@
+{
+  "name": "Magma Labs Studio",
+  "tagline": "All yours for the making.",
+  "url": "https://studio.magmalabs.dev/",
+  "summary": "A free, open-source suite of creative apps from Magma Labs — built to integrate, each ready to stand on its own.",
+  "apps": [
+    {
+      "id": "ecp",
+      "name": "Event Control Panel",
+      "summary": "Intercom, audio, and visuals unified into a single page.",
+      "icon": "/images/products/ecp/thumbnail.png",
+      "theme": "rainbow",
+      "demoUrl": "https://ecp.magmalabs.dev/",
+      "repoUrl": "https://github.com/magmalabsdev/event-control-panel"
+    },
+    {
+      "id": "capture",
+      "name": "Capture",
+      "summary": "Control and independently record multiple video and audio streams at once.",
+      "icon": "/images/products/capture/thumbnail.png",
+      "theme": "purple",
+      "demoUrl": "https://capture.magmalabs.dev/",
+      "repoUrl": "https://github.com/magmalabsdev/capture"
+    },
+    {
+      "id": "keyframe",
+      "name": "Keyframe",
+      "summary": "An easy-to-use 3D animation tool with native support for STEP model assemblies.",
+      "icon": "/images/products/keyframe/thumbnail.png",
+      "theme": "red",
+      "demoUrl": "https://keyframe.magmalabs.dev/",
+      "repoUrl": "https://github.com/magmalabsdev/keyframe"
+    }
+  ]
+}
