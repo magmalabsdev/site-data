@@ -1,6 +1,306 @@
 {
   "posts": [
     {
+  "id": "hack-club-hardware",
+  "visibility": false,
+  "title": "Fallout: How to run a hardware program correctly",
+  "summary": "A stark contrast between two Hack Club hardware programs",
+  "content": [
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "As of writing this blog post, I have attempted to participate in two Hack Club hardware YSWS programs, Blueprint and Fallout. They are both Hack Club hardware programs, but the similarities end there. Blueprint is complexity based, Fallout is hours based. Blueprint's flagship event was in San Jose, and Fallout's flagship event will be in Shenzhen. And my experience with Blueprint was abysmal but my experience with Fallout has been mostly smooth so far. But the issues I had with blueprint aren't isolated to Blueprint. In fact, these problems started with Highway, Hack Club's first ever large scale hardware program and have crept from iteration to iteration up until Fallout."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "What is a YSWS",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "A YSWS, short for \"You ship, We ship\" is a program most commonly seen in Hack Club where participants spend an amount of time building a project and receive a monetary or material grant to build the project in real life, fly to a flagship hackathon, or simply claim some prizes. In large scale YSWS programs like Fallout, work hours are converted to a currency (in Fallout's case, Koi) and are able to be spent on a collection of prizes."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "layout": "single",
+      "figures": [
+        {
+          "src": "images/blog/hack-club-hardware/fallout-prizes.png",
+          "caption": "A collection of prizes offered at Fallout"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The problems with existing hardware programs",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Let's say you're developing a game that you wish to submit to a game jam. The jam organizers provide some quick start tutorials, but all of them are for platformers and you want to build a puzzle game. Fine you guess, you'll learn it on my own. You spend hours polishing my gameplay loop, creating animations, and building interesting levels. Now the game is ready to submit. So you submit your project to the game jam and wait three days for the results, only for your game to be rejected because it's \"not complex enough,\" not that the game isn't fun to play, but the code is too simple. OK fine, you can still submit it to a lower tier in the same game jam, so you do that. Wait another three days and low and behold, it gets rejected again because you didn't add a lives system, which every game is required to have."
+        },
+        {
+          "type": "paragraph",
+          "text": "You reread the requirements for projects and at no point does it say you need a lives system anywhere. At this point, you're getting pretty pissed so you decide to just implement the stupid lives system, adding feet to a snake, and resubmit. Seven days go by without a response and you think your game is finally accepted, only for it to be rejected again because you used an older version of a game engine instead of the new install."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is how Hack Club hardware programs used to operate. One sided tutorials, vague and unnecessary project restrictions, and complexity based grants."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "How complexity based grants kill cool projects",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Blueprint, and the majority of Hack Club hardware programs for that matter, use complexity based grants instead of hour based grants which just like peer voting, seems like a good idea until you think about it for five minutes, and the best way I can explain this is by showing what happens when this gets applied to other programs."
+        },
+        {
+          "type": "paragraph",
+          "text": "What even counts as complexity? For something like a game or website, the code is the only technical aspect of it so complexity is easier to judge but for hardware there are three separate axes of complexity: mechanical, electrical, and software. Most hardware programs have adopted the definition of electrical and software complexity,"
+        },
+        {
+          "type": "paragraph",
+          "text": "Complexity is the wrong way to judge a hardware project. Talk to any experienced CAD designer and they'll tell you that a simple mechanism that works is better than a complex one that doesn't. You wouldn't do something in twelve steps if you know you can do it in two. There are so many more things that matter for a hardware project such as"
+        },
+        {
+          "type": "list",
+          "items": [
+            "What problem does it solve",
+            "How well does it solve that problem",
+            "How much effort was spent on it",
+            "How polished it is"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The overpromotion of PCB design",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "In the Blueprint program, of the eight guided projects on the Blueprint website, only two of them even include CAD instructions at all. But something that the program never fails to instruct is PCB design. All eight of the guided projects plus the vast majority of custom projects included some kind of PCB. While Blueprint never outright required PCBs in projects, they overpromoted it to the point where it was essentially the only kind of project getting any high tier approval."
+        },
+        {
+          "type": "paragraph",
+          "text": "A common excuse for shoving PCBs into every corner of Hack Club hardware is, to quote a hardware program lead, \"PCBs naturally come up because they're the easiest way to accomplish the polished bar for anything beyond a circuit.\" And yes, PCBs are wonderful WHEN THE DESIGN IS FINALIZED AND CONFIRMED WORKING. If you force a couple hundred teenagers who have never touched electronics in their life to design a PCB, chances are they're going to make a mistake. With a breadboard, this could easily be fixed by simply moving the wires but a printed PCB requires an entire design iteration, reprint, and another 12 days of shipping."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "figures": [
+        {
+          "quote": "I think hardware-based YSWSs should be much less focused on creating PCBs and more on the actual circuit creation process. [...] I believe focusing more on beginner circuit creation and iteration through kits and individual parts, rather than entire PCBs that are hard to customize after manufacturing and are expensive, would help hack clubbers actually learn how things work rather than copying a tutorial they do not understand.",
+          "attribution": "Silas Unger",
+          "role": "Hack Clubber"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "In reality, a PCB does not determine if a project is polished or not. Using product quality as a bar for polish, a standalone PCB is actually on the lower end of the scale. It's only when that PCB is part of a larger project that it becomes polished, in which case it's the quality of the larger project that makes it polished, not the PCB."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "CAD neglect",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The overpromotion of PCBs pairs with the neglect of mechanical or microcontroller CAD projects."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "\"Just buy stuff on aliexpress!1!!11!!!11!11\"",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "is a very common piece of advice given for sourcing components, and it was part of the reason my blueprint project was rejected for the second time. It is also a terrible piece of advice. Aliexpress has components that are cheaper than other storefronts, but it's not as simple as \"everything is cheaper there.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "A large number of extremely cheap Aliexpress listings are scams, something I have personal experience with when I attempted to order cheap filament. Many components have a limit of one per person, making it impractical to purchase a reasonable quantity of them for a project. Even more components are the same price or higher on Aliexpress when you account for shipping and the volume you actually need. In practice, only a select few electronics are actually cheaper on the platform, and the cost savings is usually pennies on the dollar through the scope of an entire project."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "How Fallout changed everything",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Fallout"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "hackclub",
+    "hardware",
+    "cad",
+    "ux",
+    "events"
+  ],
+  "writtenAt": "2026-06-18",
+  "readMinutes": 6
+},
+
+{
+  "id": "naming-games",
+  "visibility": true,
+  "title": "How to name a game",
+  "summary": "A few common naming styles for indie games",
+  "images": {
+    "thumbnail": "images/blog/naming-games/thumbnail.png"
+  },
+  "content": [
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "If you're like me, chances are you've procrastinated on naming your game and struggled to come up with a good name with hours or even minutes left before a game jam submission deadline. To quote Fireship, \"There are only two hard things in programming: naming things and coming up with original jokes.\" and I've personally struggled to start several projects just because I couldn't think of what to name my GitHub repository. So after developing (and naming) games for two years, here are the approaches I find that work the best."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Approach 1: What is your game's main mechanic?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This is by far the easiest way to name a game, taking the main mechanic of the game and turning that into the name. Since you developed the game and are familiar with the main mechanic, these names are often what you think of when first thinking of a name, and in most cases they work perfectly fine. A benefit of main mechanic names is that upon reading the name, the player immediately knows what the game is about.  Some examples of games named after their main mechanic include"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Minesweeper",
+            "Minecraft",
+            "Bento Blocks",
+            "Candy Crush",
+            "Cooking Fever",
+            "Folding Fury (one of my games)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This often works well when the main mechanic is novel or defines how the game works, but can backfire quickly when applied to common mechanics, such as in simulator games where you have thousands of games all named in some form \"something followed by simulator.\" In these cases, it's often better to use a different name style."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Approach 2: Who or what is your main character?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This is the style most common historically and it works reliably because the characters are one of the main defining features of the game, and, unlike the mechanics, are often distinct across games or series. These names are ubiquitous in story based games because they work well when the game's primary defining feature is the characters. But these names work universally, even in games without a clear character since they introduce an aspect of gameplay such as how the game \"The Witness\" (mild spoiler ahead) requires the players to witness scenes from different angles to solve puzzles. Some examples of main character games include"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Super Mario",
+            "The Witness",
+            "The Artisan of Glimmith",
+            "Micro Builders (also one of my games)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Approach 3: What is the first thing someone playing your game will encounter?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The goal of a game title is to 1: get the attention of the player who is likely browsing through a wishlist with dozens of games on it and 2: to offer a quick insight into how the gameplay works. Since the player doesn't know what the game's mechanics are before playing it, the first encounter approach is a difficult one to pull off which is why it is uncommon by itself."
+        },
+        {
+          "type": "paragraph",
+          "text": "This works best when the first encounter accurately represents the atmosphere of the game, such as how in the game \"Papers, Please,\" the inspector begins every inspection with that same phrase. Additionally, a gamer hearing \"Papers, Please\" can immediately tell that the game is about inspecting documents at a border crossing, a mental image the game wouldn't get if it were called \"The Inspector\" because what exactly ARE we inspecting?"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Approach 4: What does your game feel like?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This is one of the hardest to execute, but when done correctly it establishes the best mental atmosphere for what the game feels like, that's kind of the entire goal here. This is difficult because some games can feel completely different during different phases during the game."
+        },
+        {
+          "type": "paragraph",
+          "text": "A good way to pull this off is by asking yourself \"What does my game look like in the midgame, after some gameplay?\" For example, a city building game would have a skyline after a few hours of gameplay, hence the name Cities: Skylines. Or a game about building and upgrading subway lines would end with creating a Mini Metro."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "A few uncommon styles",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Some web based games use the domain they are hosted at as the name of the game. The .io games are famous for this naming convention, but only web based games use domains so this is not applicable to most games."
+        },
+        {
+          "type": "paragraph",
+          "text": "Another approach is to use a pun or pop culture reference in the name. I wouldn't consider this a full approach though because it's relatively uncommon."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Combining approaches",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The best games often don't use a single approach in isolation but combine multiple approaches to create an evocative title that remains memorable even after hours of gameplay. Some of these include"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Baba is You (character + first encounter)",
+            "Stephen's Sausage Roll (character + main mechanic)",
+            "Plants vs Zombies (characters + main mechanic)",
+            "Dancing Line (character + main mechanic)",
+            "Among Us (main mechanic + first encounter)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Ultimately, there is no \"best approach\" for naming games, and it all comes down to what your game is about. One method that often works is just to try every approach and see which one sounds the best. Ask your friends what they think your game is about from the title, and make sure it isn't too similar to other games."
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "gamedev",
+    "ux"
+  ],
+  "writtenAt": "2026-06-20",
+  "readMinutes": 4
+},
+    {
       "id": "card-showcase",
       "visibility": false,
       "title": "Card Showcase: Rich Blog Layouts",
@@ -514,7 +814,7 @@
       "figures": [
         {
           "type": "paragraph",
-          "text": "I began to decrease my involvement in math starting second semester of ninth grade, and by the start of tenth, AMC was the only math competition I participated in, and I did so without preparation or expectations. Several of my friends from MATHCOUNTS continued competitive math into high school, but by their second failed JMO qualification, they had began to lose hope. To quote one of them, \"Its the most depressing [stuff] ever, you just gamble and then lose.\" It turns out, the reason USA(J)MO qualification is so prestigious is because of how difficult it is. There is no clean AMC -> AIME -> JMO path, the only JMO qualifier I know in my grade started competitive math in high school and my friends who started well before middle school haven't qualified."
+          "text": "I began to decrease my involvement in math starting second semester of ninth grade, and by the start of tenth, AMC was the only math competition I participated in, and I did so without preparation or expectations. Several of my friends from MATHCOUNTS continued competitive math into high school, but by their second failed JMO qualification, they had began to lose hope. To quote one of them, \"Its the most depressing [stuff] ever, you just gamble and then lose.\" It turns out, the reason USA(J)MO qualification is so prestigious is because of how difficult it is. There is no clean AMC -> AIME -> JMO path, qualifying for one gives no guarantee of qualifying for the next level regardless of effort."
         }
       ]
     },
