@@ -78,6 +78,21 @@
   --danger-100: #fecaca;
   --danger-50: #fef2f2;
 
+  /* Comparison-table scale: worst → best. Each hue has a muted (subtle) and
+     vibrant (stronger) tint, used as cell/heading backgrounds via data-tone. */
+  --tone-red-muted: rgba(254, 226, 226, 0.65);
+  --tone-red-vibrant: rgba(252, 165, 165, 0.55);
+  --tone-orange-muted: rgba(255, 237, 213, 0.65);
+  --tone-orange-vibrant: rgba(253, 186, 116, 0.55);
+  --tone-yellow-muted: rgba(254, 249, 195, 0.65);
+  --tone-yellow-vibrant: rgba(253, 224, 71, 0.5);
+  --tone-green-muted: rgba(220, 252, 231, 0.65);
+  --tone-green-vibrant: rgba(134, 239, 172, 0.55);
+  --tone-blue-muted: rgba(219, 234, 254, 0.65);
+  --tone-blue-vibrant: rgba(147, 197, 253, 0.55);
+  --tone-purple-muted: rgba(237, 233, 254, 0.65);
+  --tone-purple-vibrant: rgba(196, 181, 253, 0.55);
+
   --radius-sm: 12px;
   --radius: 18px;
   --shadow-sm: none;
@@ -2246,20 +2261,76 @@ button.tag.tag-filter:focus-visible {
   line-height: 1.5;
 }
 
+/* Worst → best: red, orange, yellow, green, blue, purple — each with a
+   muted and a vibrant variant (12 distinct tones total). */
+.blog-comparison-table th[data-tone="red-muted"],
+.blog-comparison-table td[data-tone="red-muted"] {
+  background: var(--tone-red-muted);
+}
+
+.blog-comparison-table th[data-tone="red"],
+.blog-comparison-table td[data-tone="red"] {
+  background: var(--tone-red-vibrant);
+}
+
+.blog-comparison-table th[data-tone="orange-muted"],
+.blog-comparison-table td[data-tone="orange-muted"],
 .blog-comparison-table th[data-tone="warn"],
 .blog-comparison-table th[data-tone="warning"],
 .blog-comparison-table th[data-tone="risk"],
 .blog-comparison-table td[data-tone="warn"],
 .blog-comparison-table td[data-tone="warning"],
 .blog-comparison-table td[data-tone="risk"] {
-  background: rgba(255, 247, 237, 0.92);
+  background: var(--tone-orange-muted);
 }
 
+.blog-comparison-table th[data-tone="orange"],
+.blog-comparison-table td[data-tone="orange"] {
+  background: var(--tone-orange-vibrant);
+}
+
+.blog-comparison-table th[data-tone="yellow-muted"],
+.blog-comparison-table td[data-tone="yellow-muted"] {
+  background: var(--tone-yellow-muted);
+}
+
+.blog-comparison-table th[data-tone="yellow"],
+.blog-comparison-table td[data-tone="yellow"] {
+  background: var(--tone-yellow-vibrant);
+}
+
+.blog-comparison-table th[data-tone="green-muted"],
+.blog-comparison-table td[data-tone="green-muted"],
 .blog-comparison-table th[data-tone="positive"],
 .blog-comparison-table th[data-tone="good"],
 .blog-comparison-table td[data-tone="positive"],
 .blog-comparison-table td[data-tone="good"] {
-  background: rgba(240, 253, 250, 0.94);
+  background: var(--tone-green-muted);
+}
+
+.blog-comparison-table th[data-tone="green"],
+.blog-comparison-table td[data-tone="green"] {
+  background: var(--tone-green-vibrant);
+}
+
+.blog-comparison-table th[data-tone="blue-muted"],
+.blog-comparison-table td[data-tone="blue-muted"] {
+  background: var(--tone-blue-muted);
+}
+
+.blog-comparison-table th[data-tone="blue"],
+.blog-comparison-table td[data-tone="blue"] {
+  background: var(--tone-blue-vibrant);
+}
+
+.blog-comparison-table th[data-tone="purple-muted"],
+.blog-comparison-table td[data-tone="purple-muted"] {
+  background: var(--tone-purple-muted);
+}
+
+.blog-comparison-table th[data-tone="purple"],
+.blog-comparison-table td[data-tone="purple"] {
+  background: var(--tone-purple-vibrant);
 }
 
 .blog-link-grid {
@@ -2611,13 +2682,348 @@ button.tag.tag-filter:focus-visible {
   color: var(--text-muted);
 }
 
-.blog-builder-preview-article {
-  padding: 18px;
-}
-
 .blog-builder-preview-card [data-builder-preview] {
   display: grid;
   gap: 12px;
+}
+
+/* The form editor is a fallback now that the canvas is the primary surface. */
+.blog-builder-fallback-panel > summary {
+  cursor: pointer;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-muted);
+  color: var(--text-muted);
+  font-size: 13px;
+  list-style: none;
+}
+
+.blog-builder-fallback-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-builder-fallback-panel > summary::after {
+  content: " ▾";
+}
+
+.blog-builder-fallback-panel[open] > summary::after {
+  content: " ▴";
+}
+
+/* ── Blog builder canvas (in-place editor) ─────────────────────────────────
+   Every rule below is scoped to .bb-canvas or .bb-* editor chrome so that none
+   of it can reach the public post page, which reuses the same .post-* markup. */
+
+.bb-canvas {
+  padding: 18px;
+  position: relative;
+}
+
+.bb-block {
+  position: relative;
+  border-radius: var(--radius-sm);
+  transition: box-shadow 120ms var(--ease);
+}
+
+.bb-block:hover,
+.bb-block:focus-within {
+  box-shadow: 0 0 0 1px var(--accent-100);
+}
+
+.bb-block--broken {
+  padding: 14px;
+  border: 1px dashed var(--danger-100);
+  background: var(--danger-50);
+}
+
+/* Toolbar sits above the block and only materialises on hover/focus, so the
+   canvas reads as the finished post until you interact with it. */
+.bb-block-toolbar {
+  position: absolute;
+  top: -14px;
+  right: 8px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms var(--ease);
+}
+
+.bb-block:hover > .bb-block-toolbar,
+.bb-block:focus-within > .bb-block-toolbar,
+.bb-block-toolbar:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bb-block-handle {
+  cursor: grab;
+  padding: 0 4px;
+  color: var(--text-muted);
+  line-height: 1;
+  user-select: none;
+}
+
+.bb-block-handle:active {
+  cursor: grabbing;
+}
+
+.bb-block-type {
+  height: 24px;
+  max-width: 120px;
+  padding: 0 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-muted);
+  color: var(--text);
+  font: inherit;
+  font-size: 11px;
+}
+
+.bb-block-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.bb-block-btn:hover:not(:disabled),
+.bb-block-btn.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-700);
+}
+
+.bb-block-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Editable fields ──────────────────────────────────────────────────────── */
+
+.bb-editable {
+  outline: none;
+  border-radius: 4px;
+  /* Shift+Enter stores a real newline; show it rather than collapsing it. */
+  white-space: pre-wrap;
+}
+
+.bb-editable:hover {
+  background: var(--accent-50);
+}
+
+.bb-editable:focus {
+  background: var(--accent-50);
+  box-shadow: 0 0 0 2px var(--accent-200);
+}
+
+.bb-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* An image with no source yet: show a drop-target tile instead of a broken icon. */
+.bb-image-empty img {
+  min-height: 160px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-muted);
+}
+
+/* ── Insert rail ──────────────────────────────────────────────────────────── */
+
+.bb-inserter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  margin: -7px 0;
+  z-index: 2;
+}
+
+.bb-inserter-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent-300);
+  opacity: 0;
+  transition: opacity 120ms var(--ease);
+}
+
+.bb-inserter-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 120ms var(--ease);
+}
+
+.bb-inserter:hover .bb-inserter-line,
+.bb-inserter:focus-within .bb-inserter-line,
+.bb-inserter.is-open .bb-inserter-line,
+.bb-inserter.is-drop-target .bb-inserter-line {
+  opacity: 1;
+}
+
+.bb-inserter:hover .bb-inserter-btn,
+.bb-inserter:focus-within .bb-inserter-btn,
+.bb-inserter.is-open .bb-inserter-btn {
+  opacity: 1;
+}
+
+.bb-inserter.is-drop-target .bb-inserter-line {
+  background: var(--accent-700);
+  height: 3px;
+}
+
+/* ── Block picker ─────────────────────────────────────────────────────────── */
+
+.bb-picker {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.14);
+}
+
+.bb-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
+  gap: 4px;
+}
+
+.bb-picker-item {
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bb-picker-item:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-100);
+  color: var(--accent-700);
+}
+
+/* ── Structured-field popover ─────────────────────────────────────────────── */
+
+.bb-popover {
+  position: absolute;
+  z-index: 20;
+  width: min(420px, calc(100vw - 32px));
+  max-height: min(60vh, 520px);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.18);
+}
+
+.bb-popover-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.bb-popover-close {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.bb-popover-body {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+}
+
+/* ── Canvas-only overrides of public post styles ──────────────────────────── */
+
+/* Carousel slides are hidden via the `hidden` property; a class selector beats
+   the UA [hidden] rule so every image figure stays visible and clickable. */
+.bb-canvas .post-carousel-slide {
+  display: block;
+}
+
+.bb-canvas .post-carousel-controls {
+  display: none;
+}
+
+/* The whole link card is an <a>; make it read as text, not a link. */
+.bb-canvas .blog-link-card {
+  cursor: text;
+}
+
+.bb-canvas .blog-link-url {
+  opacity: 0.6;
+}
+
+/* Copy/run/download buttons are inert while editing. */
+.bb-canvas .blog-code-action-btn {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.bb-canvas .blog-qa-item > summary {
+  cursor: text;
+}
+
+/* Text selection during a drag would fight the drag itself. */
+.bb-dragging .bb-editable {
+  user-select: none;
+}
+
+.bb-dragging .bb-block {
+  cursor: grabbing;
 }
 
 .is-hidden {
