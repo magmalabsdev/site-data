@@ -1,5 +1,26 @@
 {
+  "featured": ["adom", "ecp", "folding-fury", "youtube-channel"],
   "products": [
+        {
+      "id": "adom",
+      "visibility": true,
+      "name": "A Drop of Magenta",
+      "summary": "A puzzle game about filling outlines using the limited paint available on the board.",
+      "description": "A puzzle game about filling outlines using the limited paint available on the board.",
+      "images": {
+        "icon": "https://cdn.hackclub.com/01a188c2-d2b7-7576-89c9-7c21490450f2/adom-trailer.mp4",
+        "thumbnail": "https://cdn.hackclub.com/01a188c2-d2b7-7576-89c9-7c21490450f2/adom-trailer.mp4",
+        "gallery": [
+          "/images/products/adom/ss1.avif",
+          "/images/products/adom/ss2.avif"
+        ]
+      },
+      "tags": ["gamedev"],
+      "releasedAt": "2026-11-23",
+      "updatedAt": "2026-11-23",
+      "links": [{ "label": "Steam", "url": "https://store.steampowered.com/app/5206930/A_Drop_of_Magenta/" }]
+    },
+    
     {
       "id": "assembled",
       "visibility": false,
@@ -47,7 +68,6 @@
         {
       "id": "ecp",
       "visibility": true,
-      "isFeatured": true,
       "name": "Event Control Panel",
       "summary": "A self contained unified event A/V app for easy slides, music, and announcements",
       "description": "A self contained unified event A/V app for easy slides, music, and announcements",
@@ -56,8 +76,7 @@
         "thumbnail": "/images/products/ecp/thumbnail.png"
       },
       "tags": ["events", "html", "css", "javascript"],
-      "demoUrl": "https://ecp.magmalabs.dev/",
-      "repoUrl": "https://github.com/magmalabsdev/event-control-panel",
+      "links": [{ "label": "Demo", "url": "https://ecp.magmalabs.dev/" }, { "label": "Repository", "url": "https://github.com/magmalabsdev/event-control-panel" }],
       "releasedAt": "2026-05-26",
       "updatedAt": "2026-05-26"
     },
@@ -78,8 +97,7 @@
         ]
       },
       "tags": ["video-production", "html", "css", "javascript"],
-      "demoUrl": "https://resolve.magmalabs.dev/", 
-      "repoUrl": "https://github.com/magmalabsdev/event-control-panel",
+      "links": [{ "label": "Demo", "url": "https://resolve.magmalabs.dev/" }, { "label": "Repository", "url": "https://github.com/magmalabsdev/event-control-panel" }],
       "releasedAt": "2026-05-25",
       "updatedAt": "2026-05-26"
     },
@@ -87,7 +105,6 @@
     {
       "id": "folding-fury",
       "visibility": true,
-      "isFeatured": true,
       "name": "Folding Fury",
       "summary": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
       "description": "A game where the player is a piece of paper and folds into different forms to defeat enemies.",
@@ -100,8 +117,7 @@
           "/images/products/folding-fury/death.png"
         ]
       },
-      "demoUrl": "https://bffwouj3472.itch.io/folding-fury",
-      "repoUrl": "https://github.com/magmalabsdev/folding-fury",
+      "links": [{ "label": "Play on itch.io", "url": "https://bffwouj3472.itch.io/folding-fury" }, { "label": "Repository", "url": "https://github.com/magmalabsdev/folding-fury" }],
       "tags": ["gamedev","unity", "coding"],
       "releasedAt": "2025-05-28",
       "updatedAt": "2025-05-28"
@@ -109,7 +125,6 @@
     {
       "id": "youtube-channel",
       "visibility": true,
-      "isFeatured": true,
       "name": "Magma Labs Youtube Channel",
       "summary": "A youtube channel showcasing the projects of Magma Labs",
       "description": "A youtube channel showcasing the projects of Magma Labs",
@@ -119,7 +134,7 @@
         "gallery": [
         ]
       },
-      "demoUrl": "https://www.youtube.com/@magmalabs3472",
+      "links": [{ "label": "YouTube", "url": "https://www.youtube.com/@magmalabs3472" }],
       "tags": ["math","coding", "cubing", "cad", "urbanism", "video-production"],
       "releasedAt": "2015-03-20",
       "updatedAt": "2026-03-29"
@@ -138,8 +153,7 @@
       },
       "features": [
       ],
-      "demoUrl": "https://magmalabs.dev/", 
-      "repoUrl": "https://github.com/magmalabsdev/magmalabs.dev",
+      "links": [{ "label": "Demo", "url": "https://magmalabs.dev/" }, { "label": "Repository", "url": "https://github.com/magmalabsdev/magmalabs.dev" }],
       "tags": ["html", "css", "graphic-design"],
       "releasedAt": "2024-08-02",
       "updatedAt": "2026-04-27"

@@ -1,6 +1,6 @@
 /* Magma Labs static site — light theme with #2f1254 accents */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
   font-family: 'Open Sauce Two';
@@ -64,6 +64,10 @@
   --accent-100: #ded6f8;
   --accent-50: #f4f1fd;
   --accent-soft: rgba(47, 18, 84, 0.08);
+
+  --font-futuristic: 'Bruno Ace', 'Open Sauce Two', ui-sans-serif, system-ui, sans-serif;
+  --font-technical: 'Space Mono', ui-monospace, monospace;
+  --sticker-cut: 22px;
 
   --info-700: #1d4ed8;
   --info-100: #bfdbfe;
@@ -1238,7 +1242,8 @@ a {
   outline-offset: 2px;
 }
 
-.product-gallery-item img {
+.product-gallery-item img,
+.product-gallery-item video {
   display: block;
   width: 100%;
   height: 64px;
@@ -1747,8 +1752,10 @@ a {
 }
 
 .post-page {
-  max-width: 980px;
+  max-width: 735px;
   margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
 }
 
 .post-title {
@@ -3564,17 +3571,13 @@ textarea.input {
 
 /* ── Sliding hero ──────────────────────────────────────────────────────── */
 .home-hero {
-  background:
-    radial-gradient(1000px 480px at 80% -10%, var(--accent-50), transparent 60%),
-    var(--bg-muted);
-  padding: 28px 0 18px;
+  position: relative;
+  background: var(--bg-muted);
 }
 
 .home-hero-viewport {
-  width: min(var(--container), calc(100% - 40px));
-  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
-  border-radius: var(--radius);
 }
 
 .hero-track {
@@ -3584,19 +3587,38 @@ textarea.input {
 }
 
 .hero-slide {
+  position: relative;
   flex: 0 0 100%;
   min-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  align-items: center;
-  padding: 26px 24px 32px;
+  aspect-ratio: 4 / 5;
+  max-height: 80vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 6, 20, 0.8), rgba(10, 6, 20, 0.25) 70%);
+  pointer-events: none;
 }
 
 .hero-slide-body {
-  display: grid;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 14px;
-  align-content: center;
+  padding: 24px 24px 56px;
+  pointer-events: none;
+}
+
+.hero-slide-body > * {
+  pointer-events: auto;
 }
 
 .hero-slide-eyebrow {
@@ -3604,7 +3626,7 @@ textarea.input {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent-600);
+  color: var(--accent-100);
 }
 
 .hero-slide-title {
@@ -3612,11 +3634,12 @@ textarea.input {
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   letter-spacing: -0.03em;
   line-height: 1.05;
+  color: #fff;
 }
 
 .hero-slide-summary {
   margin: 0;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 1.05rem;
   max-width: 48ch;
 }
@@ -3628,20 +3651,24 @@ textarea.input {
   margin-top: 4px;
 }
 
+.hero-slide-actions .btn.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
 .hero-slide-media {
-  display: block;
-  border-radius: var(--radius-sm);
-  background: #fff;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  min-height: 220px;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--accent-900, #1a0933);
+  overflow: hidden;
 }
 
 .hero-slide-media.is-empty {
-  color: var(--accent-700);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 800;
   font-size: 1.4rem;
   padding: 40px;
@@ -3651,31 +3678,36 @@ textarea.input {
 .hero-slide-img {
   width: 100%;
   height: 100%;
-  max-height: 360px;
-  object-fit: contain;
-  padding: 18px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 2;
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
+  pointer-events: none;
 }
 
 .hero-dot {
+  pointer-events: auto;
   width: 30px;
   height: 5px;
   border-radius: 4px;
   border: 0;
   padding: 0;
-  background: var(--accent-100);
+  background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   transition: background 160ms var(--ease), width 160ms var(--ease);
 }
 
 .hero-dot.is-active {
-  background: var(--accent-700);
+  background: #fff;
   width: 44px;
 }
 
@@ -4063,18 +4095,19 @@ textarea.input {
 }
 
 @media (min-width: 900px) {
-  .home-hero {
-    padding: 40px 0 24px;
-  }
-
   .hero-slide {
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    padding: 40px 44px;
+    aspect-ratio: 2.5 / 1;
+    max-height: none;
   }
 
-  .hero-slide-media {
-    min-height: 360px;
+  .hero-slide::after {
+    background: linear-gradient(90deg, rgba(10, 6, 20, 0.78), rgba(10, 6, 20, 0.3) 55%, transparent);
+  }
+
+  .hero-slide-body {
+    justify-content: center;
+    max-width: 55%;
+    padding: 40px 24px 40px max(44px, calc((100vw - var(--container)) / 2));
   }
 
   .home-cards-grid {
@@ -4088,5 +4121,328 @@ textarea.input {
   .home-blog {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 32px;
+  }
+}
+
+
+/* ── Blog stickers ────────────────────────────────────────────────────────────
+   Die-cut sticker treatment for visual blocks inside posts. The shape lives on
+   pseudo-elements because clip-path on the card would also clip its content and
+   focus outlines. ::before is the cut line, ::after the printed panel. */
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+) {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  padding: 24px 26px 38px;
+}
+
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+)::before,
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(
+    var(--sticker-cut) 0,
+    100% 0,
+    100% calc(100% - var(--sticker-cut)),
+    calc(100% - var(--sticker-cut)) 100%,
+    0 100%,
+    0 var(--sticker-cut)
+  );
+}
+
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+)::before {
+  inset: 0;
+  background: var(--accent-100);
+}
+
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+)::after {
+  inset: 3px;
+  background-color: #fff;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='32'%3E%3Cpolygon points='6.0,1.0 10.3,3.5 10.3,8.5 6.0,11.0 1.7,8.5 1.7,3.5' fill='%23f4f1fd'/%3E%3Cpolygon points='16.0,1.0 20.3,3.5 20.3,8.5 16.0,11.0 11.7,8.5 11.7,3.5' fill='%23f4f1fd'/%3E%3Cpolygon points='26.0,1.0 30.3,3.5 30.3,8.5 26.0,11.0 21.7,8.5 21.7,3.5' fill='%23f4f1fd'/%3E%3Cpolygon points='36.0,1.0 40.3,3.5 40.3,8.5 36.0,11.0 31.7,8.5 31.7,3.5' fill='%23f4f1fd'/%3E%3Cpolygon points='11.0,9.7 15.3,12.2 15.3,17.2 11.0,19.7 6.7,17.2 6.7,12.2' fill='%23f4f1fd'/%3E%3Cpolygon points='21.0,9.7 25.3,12.2 25.3,17.2 21.0,19.7 16.7,17.2 16.7,12.2' fill='%238a65d6'/%3E%3Cpolygon points='31.0,9.7 35.3,12.2 35.3,17.2 31.0,19.7 26.7,17.2 26.7,12.2' fill='%23f4f1fd'/%3E%3Cpolygon points='16.0,18.4 20.3,20.9 20.3,25.9 16.0,28.4 11.7,25.9 11.7,20.9' fill='%23f4f1fd'/%3E%3Cpolygon points='26.0,18.4 30.3,20.9 30.3,25.9 26.0,28.4 21.7,25.9 21.7,20.9' fill='%23f4f1fd'/%3E%3C/svg%3E"),
+    linear-gradient(to left, transparent, #fff),
+    repeating-linear-gradient(to bottom, var(--accent-700) 0 2px, transparent 2px 4px);
+  background-repeat: no-repeat;
+  background-position:
+    right 14px top 14px,
+    right calc(var(--sticker-cut) + 10px) bottom 12px,
+    right calc(var(--sticker-cut) + 10px) bottom 12px;
+  background-size: 48px 32px, 96px 14px, 96px 14px;
+}
+
+/* Sticker type: Bruno Ace for headings and figures (single weight, so no faux bold),
+   Space Mono for labels. Body copy stays in Open Sauce Two. */
+:is(
+  .post-content-card--image,
+  .post-content-card--chart,
+  .post-content-card--comparison,
+  .post-content-card--big-number,
+  .post-content-card--quote,
+  .post-content-card--timeline
+) > .post-content-card-title {
+  font-family: var(--font-futuristic);
+  font-weight: 400;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  padding-right: 64px; /* keeps long titles clear of the hex cluster */
+}
+
+.post-content-card--big-number .blog-stat-value {
+  font-family: var(--font-futuristic);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.post-content-card--big-number .blog-stat-title,
+.post-content-card--quote .blog-quote-card footer,
+.post-content-card--timeline .blog-timeline-time {
+  font-family: var(--font-technical);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Quotes have no heading for the hex cluster to sit beside, so it would hide behind
+   the quote itself. */
+.post-content-card--quote::after {
+  background-image:
+    none,
+    linear-gradient(to left, transparent, #fff),
+    repeating-linear-gradient(to bottom, var(--accent-700) 0 2px, transparent 2px 4px);
+}
+
+/* The post column is narrower than the viewport breakpoints assume, so these can't
+   use their two-column and max-content desktop layouts. */
+.post-page .blog-chart-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.post-page .blog-comparison-table {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  :root {
+    --sticker-cut: 14px;
+  }
+
+  :is(
+    .post-content-card--image,
+    .post-content-card--chart,
+    .post-content-card--comparison,
+    .post-content-card--big-number,
+    .post-content-card--quote,
+    .post-content-card--timeline
+  ) {
+    padding-inline: 18px;
+  }
+}
+
+/* ── Up next: "Also see" and "Read more" at the end of a post ───────────────── */
+.post-also-see {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.post-also-see-card,
+.post-read-more-card {
+  color: inherit;
+}
+
+.post-also-see-card {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  transition: border-color 140ms var(--ease);
+}
+
+.post-also-see-card:hover {
+  border-color: var(--accent-200);
+}
+
+.post-also-see-card:focus-visible,
+.post-read-more-card:focus-visible {
+  outline: 3px solid var(--accent-200);
+  outline-offset: 2px;
+}
+
+.post-also-see-body {
+  display: grid;
+  flex: 1;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  padding: 18px 20px;
+}
+
+.post-also-see-body h3,
+.post-read-more-card h3 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.post-also-see-body h3 {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.post-next-summary {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.post-also-see-card .post-meta {
+  margin-top: 4px;
+}
+
+/* The image fills the card's height, however tall the text makes it. */
+.post-also-see-card .post-thumb {
+  position: relative;
+  flex: 0 0 33%;
+  border: 0;
+  border-radius: 0;
+}
+
+.post-also-see-card .post-thumb-img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.post-read-more {
+  margin-top: 56px;
+}
+
+.post-read-more .post-read-more-heading {
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-technical);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-read-more-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+.post-read-more-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.post-read-more-card .post-thumb {
+  border-radius: 8px;
+}
+
+.post-read-more-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.post-read-more-card:hover h3 {
+  color: var(--accent-800);
+}
+
+.post-read-more-card time {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+@media (max-width: 559px) {
+  .post-also-see-card {
+    flex-direction: column;
+  }
+
+  .post-also-see-card .post-thumb {
+    order: -1;
+    flex: none;
+  }
+
+  .post-also-see-card .post-thumb-img {
+    position: static;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 560px) {
+  .post-read-more-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .post-read-more-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .post-read-more-card {
+    position: relative;
+  }
+
+  .post-read-more-card + .post-read-more-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -24px;
+    border-left: 1px solid var(--border);
   }
 }
