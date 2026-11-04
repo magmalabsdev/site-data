@@ -2955,6 +2955,48 @@ button.tag.tag-filter:focus-visible {
 
 /* ── Structured-field popover ─────────────────────────────────────────────── */
 
+.bb-autocomplete {
+  position: relative;
+}
+
+.bb-autocomplete-list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  margin: 0;
+  padding: 4px;
+  overflow: auto;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.18);
+}
+
+.bb-autocomplete-option {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.bb-autocomplete-option:hover,
+.bb-autocomplete-option.is-active {
+  background: var(--accent-50);
+}
+
+.bb-autocomplete-hint {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .bb-popover {
   position: absolute;
   z-index: 20;
