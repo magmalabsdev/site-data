@@ -6,7 +6,7 @@
   "title": "\"Bootstraps Elitism\" needs to stop",
   "summary": "Using a more advanced tool doesn't make you superior to someone else",
   "images": {
-    "thumbnail": "images/blog/bootstraps-elitism-needs-to-stop/elitism.png"
+    "thumbnail": "/images/blog/bootstraps-elitism-needs-to-stop/elitism.png"
   },
   "content": [
     {
@@ -141,7 +141,7 @@
       "layout": "single",
       "figures": [
         {
-          "src": "images/blog/hack-club-hardware/fallout-prizes.png",
+          "src": "/images/blog/hack-club-hardware/fallout-prizes.png",
           "caption": "A collection of prizes offered at Fallout"
         }
       ]
