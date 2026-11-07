@@ -1,6 +1,117 @@
 {
   "posts": [
     {
+  "id": "bootstraps-elitism-needs-to-stop",
+  "visibility": true,
+  "title": "\"Bootstraps Elitism\" needs to stop",
+  "summary": "Using a more advanced tool doesn't make you superior to someone else",
+  "images": {
+    "thumbnail": "images/blog/bootstraps-elitism-needs-to-stop/elitism.png"
+  },
+  "content": [
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Around six months ago, I found a job teaching middle school students basic programming meaning I would have to travel regularly to a school around 10 kilometers from mine. This distance was far enough that manually biking was difficult, but not so far that I was forced to drive, and being a broke student without a license anyway, I decided to get an E-bike. This worked wonderfully for what I needed it for, but this made me the target of hate from people who were into cycling, the logic being \"It's 'only' 10km, just bike manually.\" I've personally pedaled that specific route many times and I guess if I made all the perfect optimizations it works, but it's really not the ideal solution for an unathletic student with a backpack on dangerous American streets after 7 hours of school who needs to arrive on time consistently. This reminded me of a too common attitude I see towards beginners in technical communities, an attitude that I call \"Bootstraps Elitism,\" or in other words, flaming people, including beginners, who use beginner friendly tools for being \"weak\" or \"lazy\" for not wanting to fiddle with more advanced tools."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The open source hacker community",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The open source hacker community carries a strong hate toward closed source software, and the debate over the justification of this hate is a controversial issue which I've covered in a previous blog post. But packaged with this hate is a widespread attitude of elitism. Many people who use open source tools believe that they are intellectually and morally superior to those who don't."
+        },
+        {
+          "type": "paragraph",
+          "text": "A few years ago when Microsoft pushed an update which added ads to Windows 11, a lot of people were rightfully outraged. However, the Linux community, instead of having sympathy for windows users, responded by claiming all of their problems would be solved if they switched to Linux. When a solutions architect rightfully mentioned that some people needed to use Windows and that they had the right to complain about a company needlessly making their own product worse, he was flamed by members of his own community. [2][3]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Convenience features are a debate that have come up time and time again in the hacker community. Within the 3D printing community, there are essentially two dominating beliefs: one group dominated by Bambu Lab users who support convenience features and want usage to be as easy as possible, even if it means sacrificing features, and everyone else who believes convenience features are a waste of money. Within the second group, there is a subgroup, the \"Prusa users\", being the equivalent of bootstraps elitist Linux users in OS space. Historically speaking, when most people think about the 3D printing community, this is the group they think about, since this group was historically dominant in a time where 3D printers weren't anything more than hot glue guns attached to motion systems. As Zack Freedman, a veteran of the community said, “The 3D printing community of 2012 was viciously opposed to any sort of convenience feature. If it was physically possible for a task to be done using diligence, skill, and your hands, but you automated it out, you’d get your f***ing head ripped off.\" But while not as prevalent, this attitude still very much exists, as Freedman puts it, \"Assigning moral goodness to unnecessary work is a pathological madness that still infects the so called 3D printing community to this very day” [1]"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Accessibility benefits everyone",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "What most experienced people overlook is that accessibility and convenience features benefit everyone, not just beginners."
+        },
+        {
+          "type": "paragraph",
+          "text": "Today, anyone can get into 3D printing with a $200 A1 mini, but back then, your options were either a $2200 MakerBot or to build it yourself. The launch of the Prusa i3 MK3 made it somewhat more accessible, but going for $749, it was still a machine you had to build and repair yourself. 3D printing remained largely limited to technical users until the advent of Bambu Lab and their focus on UX."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fast print speed, easy nozzle swaps, and flow compensation are all features Bambu Lab implemented into their first 3D printer which quickly became the most funded project on kickstarter. These improvements all made it easier for beginners to get into 3D printing but that they also made it much easier for experienced 3D printer users to... you know... actually print stuff."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Productive discussion",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "On top of being an unproductive discussion, bootstraps elitists actively harm the communities they try so hard to gatekeep. When people are made fun of by a community for the tools they use, they develop negative impressions toward that community and thus will be less likely to join it in the future. (this really isn't that surprising) But this also shapes the perception of the community from people outside, even people who have never interacted with insiders, as \"the community that's super technical\" because they don't accept people who aren't."
+        },
+        {
+          "type": "paragraph",
+          "text": "Experienced people often fail to realize that not everyone experiences the same difficulty, and that \"easy\" for them could be nearly impossible for a beginner. As a result, they make fun of people who are genuinely experiencing difficulty for being \"lazy\". This makes beginners think that they aren't a \"real [X]er\" unless they follow a hyperspecific ruleset. Incidentally, this effect is very well illustrated in the vehicular cycling community in North America."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason Slaughter, known online as Not Just Bikes, is an urbanist advocate who lives in the Netherlands. One of his most discussed topics is on how dangerous riding a bike was and still is in North America: \"I grew up in Canada in the 1980s in an environment where vehicular cycling and racing bicycles were the norm. I didn't even any other kind of cycling existed, which is why I gave up cycling as soon as I got a driver's license ... When I learned, many decades later, that cycling didn't have to involve cycling didn't have to involve dropped handlebars and lycra while weaving in and out of car traffic, I was actually interested in doing it.\" [4]"
+        },
+        {
+          "type": "paragraph",
+          "text": "But most importantly, not everyone is trying to join a community. Some people get into electronics not as an activity but to repair their old devices. Some people get into 3D printing not to build a printer but to make prototype parts for their robotics team. And some people ride bicycles not to race in ironmans, but to get to work on time every day. The majority of people don't want to fiddle with how their tools work, they want their tools *to* work so they can focus their time on other tasks. As Michael Staggs, a tech blogger put it. \"To the average person, not being able to view and modify a spreadsheet from work is a much more serious restriction than not being able to view or modify the source code.\""
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "ux",
+    "logic",
+    "opensource",
+    "opinion"
+  ],
+  "alsoSee": [
+    "all-or-nothing"
+  ],
+  "writtenAt": "2026-11-04",
+  "citations": [
+    {
+      "label": "3D printing community of 2012",
+      "url": "https://www.youtube.com/watch?v=KgwFTv9J7ik&t=1369s"
+    },
+    {
+      "label": "Elitism, Identity, and the Open Source Community",
+      "url": "https://techtea.io/articles/2024/elitism-identity-open-source/"
+    },
+    {
+      "label": "A thread about people who need to run Windows",
+      "url": "https://www.rubenerd.au/people-who-need-to-run-windows/"
+    },
+    {
+      "label": "Jason Slaughter on Vehicular Cycling",
+      "url": "https://youtu.be/pRPduRHBhHI?t=726"
+    },
+    {
+      "label": "How Open Source Suffers from Elitism",
+      "url": "https://tausciam.medium.com/how-open-source-suffers-from-elitism-5638b353e13a"
+    }
+  ],
+  "readMinutes": 6
+},
+    {
   "id": "hack-club-hardware",
   "visibility": false,
   "title": "Fallout: How to run a hardware program correctly",

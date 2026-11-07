@@ -4488,3 +4488,69 @@ textarea.input {
     border-left: 1px solid var(--border);
   }
 }
+
+/* Numbered citations and inline [n] references */
+.post-citations-list {
+  counter-reset: citation;
+}
+
+.post-citations-list li {
+  counter-increment: citation;
+  grid-template-columns: 2.4em 1fr;
+  scroll-margin-top: 90px;
+}
+
+.post-citations-list li::before {
+  content: "[" counter(citation) "]";
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+.post-citations-list li:target {
+  background: var(--accent-50, rgba(47, 18, 84, 0.08));
+  border-radius: 6px;
+}
+
+.post-citation-ref {
+  font-family: "Space Mono", monospace;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: var(--accent-700);
+  text-decoration: none;
+}
+
+.post-citation-ref:hover {
+  text-decoration: underline;
+}
+
+/* Discord-style inline formatting */
+.fmt-code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--accent-50);
+  color: var(--accent-700);
+  font-family: "Space Mono", monospace;
+  font-size: 0.9em;
+}
+
+.fmt-spoiler {
+  padding: 0 2px;
+  border-radius: 4px;
+  background: var(--accent-700);
+  color: transparent;
+  cursor: pointer;
+}
+
+.fmt-spoiler.is-revealed {
+  background: var(--accent-50);
+  color: inherit;
+  cursor: auto;
+}
+
+.fmt-mark {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  opacity: 0.55;
+}
