@@ -10,15 +10,6 @@
   },
   "content": [
     {
-  "id": "bootstraps-elitism-needs-to-stop",
-  "visibility": true,
-  "title": "\"Bootstraps Elitism\" needs to stop",
-  "summary": "Using a more advanced tool doesn't make you superior to someone else",
-  "images": {
-    "thumbnail": "/images/blog/bootstraps-elitism-needs-to-stop/elitism.png"
-  },
-  "content": [
-    {
       "type": "text",
       "figures": [
         {
@@ -105,25 +96,6 @@
       "label": "3D printing community of 2012",
       "url": "https://www.youtube.com/watch?v=KgwFTv9J7ik&t=1369s"
     },
-    {
-      "label": "Elitism, Identity, and the Open Source Community",
-      "url": "https://techtea.io/articles/2024/elitism-identity-open-source/"
-    },
-    {
-      "label": "A thread about people who need to run Windows",
-      "url": "https://www.rubenerd.au/people-who-need-to-run-windows/"
-    },
-    {
-      "label": "Jason Slaughter on Vehicular Cycling",
-      "url": "https://youtu.be/pRPduRHBhHI?t=726"
-    },
-    {
-      "label": "How Open Source Suffers from Elitism",
-      "url": "https://tausciam.medium.com/how-open-source-suffers-from-elitism-5638b353e13a"
-    }
-  ],
-  "readMinutes": 6
-},
     {
       "label": "Elitism, Identity, and the Open Source Community",
       "url": "https://techtea.io/articles/2024/elitism-identity-open-source/"
