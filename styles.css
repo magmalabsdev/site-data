@@ -1883,6 +1883,89 @@ button.tag.tag-filter:focus-visible {
   max-width: none;
 }
 
+/* ── Lego-grid tiles ─────────────────────────────────────────────────────────
+   Posts whose cards carry a `tile` lay out on six equal columns and rows one
+   body-text line tall (body is 1rem at line-height 1.55). Tiles abut with no
+   gap; empty cells and overlaps are allowed. Placement is inline from JS. */
+.post-content-grid {
+  --post-line: 1.55rem;
+}
+
+.post-content-grid--tiled {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: var(--post-line);
+  gap: 0;
+}
+
+.post-content-grid--tiled > .post-content-card,
+.post-content-grid--tiled > .bb-block > .post-content-card {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* :where keeps this below the sticker cards' own padding further down. */
+:where(.post-content-grid--tiled) .post-content-card {
+  padding: 0 8px;
+}
+
+.post-content-grid--tiled .post-content-card.is-overflowing {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3 * var(--post-line)), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 3 * var(--post-line)), transparent);
+}
+
+/* Headingless image cards: no sticker frame or padding; the box is the image,
+   cropped (object-fit: cover) to fill the tile. A caption, if any, sits under
+   it inside the same box. Adding a heading brings the framed card back. */
+.post-content-grid--tiled .post-content-card--bare {
+  padding: 0;
+  gap: 0;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.post-content-grid--tiled .post-content-card--bare::before,
+.post-content-grid--tiled .post-content-card--bare::after {
+  content: none;
+}
+
+.post-content-grid--tiled .post-content-card--bare > .post-media-single,
+.post-content-grid--tiled .post-content-card--bare > .post-media-grid {
+  height: 100%;
+  min-height: 0;
+  grid-auto-rows: minmax(0, 1fr);
+}
+
+.post-content-grid--tiled .post-content-card--bare .post-media-figure {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.post-content-grid--tiled .post-content-card--bare .post-media-image {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+/* Sixths of the column are too narrow on phones: stack in reading order. */
+@media (max-width: 560px) {
+  .post-content-grid--tiled:not(.bb-blocks) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    gap: 18px;
+  }
+
+  .post-content-grid--tiled:not(.bb-blocks) > .post-content-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
 .post-content-card-title {
   margin: 0;
   font-size: clamp(1.08rem, 2vw, 1.34rem);
@@ -2342,13 +2425,22 @@ button.tag.tag-filter:focus-visible {
 
 .blog-link-grid {
   display: grid;
+  /* One link spans the whole tile; several flow into as many columns fit. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 12px;
 }
 
+/* Don't stretch link cards to fill a taller tile; they stay compact. */
+.post-content-card--link-embed {
+  align-content: start;
+}
+
 .blog-link-card {
+  position: relative;
   display: grid;
-  gap: 8px;
-  padding: 16px;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px 34px 8px 14px;
   border-radius: 16px;
   border: 1px solid rgba(226, 232, 240, 0.95);
   background: rgba(255, 255, 255, 0.9);
@@ -2381,18 +2473,30 @@ button.tag.tag-filter:focus-visible {
   overflow: visible;
 }
 
-.blog-link-site {
-  color: var(--accent-500);
-  font-size: 0.8rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+/* Compact link: heading (label or URL) with an external-link arrow, plus an
+   optional single-line description. */
+.blog-link-title {
+  overflow: hidden;
+  color: var(--accent-700);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.blog-link-url {
-  color: var(--text-muted);
+/* On the card, not the heading, so truncating a long URL never hides it. */
+.blog-link-card::after {
+  content: "↗";
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  color: var(--accent-400);
+  font-weight: 700;
+}
+
+.blog-link-card > .post-content-figure-description {
+  overflow: hidden;
   font-size: 0.9rem;
-  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .blog-timeline {
@@ -3052,8 +3156,10 @@ button.tag.tag-filter:focus-visible {
   cursor: text;
 }
 
-.bb-canvas .blog-link-url {
-  opacity: 0.6;
+/* .bb-editable's pre-wrap would let these wrap on the canvas; keep them one
+   line so the builder measures the same height as the published card. */
+.bb-canvas .blog-link-card > .bb-editable {
+  white-space: nowrap;
 }
 
 /* Copy/run/download buttons are inert while editing. */
@@ -3073,6 +3179,215 @@ button.tag.tag-filter:focus-visible {
 
 .bb-dragging .bb-block {
   cursor: grabbing;
+}
+
+/* ── Tiles in the builder ─────────────────────────────────────────────────── */
+
+.bb-blocks.post-content-grid--tiled {
+  background-image:
+    linear-gradient(to right, var(--accent-100) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--accent-50) 1px, transparent 1px);
+  background-size: calc(100% / 6) 100%, 100% var(--post-line);
+  box-shadow: inset -1px 0 0 var(--accent-100);
+}
+
+.post-content-grid--tiled > .bb-block {
+  min-width: 0;
+  min-height: 0;
+}
+
+.post-content-grid--tiled > .bb-block > .post-content-card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.bb-block.is-tile-active {
+  z-index: 1000 !important;
+  box-shadow: 0 0 0 2px var(--accent-400);
+}
+
+.bb-block-handle:focus-visible {
+  outline: 2px solid var(--accent-300);
+  border-radius: 4px;
+}
+
+/* Empty cells: tinted, with a + that opens the block picker sized to the gap.
+   Inset 2px so neighbouring gaps and tiles read as separate pieces. */
+.bb-gap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  margin: 2px;
+  border: 1px dashed var(--accent-200);
+  border-radius: 6px;
+  background: var(--accent-50);
+  color: var(--accent-400);
+  cursor: pointer;
+  transition: background 120ms var(--ease), border-color 120ms var(--ease);
+}
+
+.bb-gap:hover,
+.bb-gap:focus-visible,
+.bb-gap.is-open {
+  border-color: var(--accent-300);
+  background: var(--accent-100);
+  color: var(--accent-700);
+  outline: none;
+}
+
+.bb-gap.is-open {
+  z-index: 2000;
+}
+
+.bb-gap-plus {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.bb-gap > .bb-picker {
+  top: calc(50% + 14px);
+  cursor: default;
+}
+
+/* Keep the picker over the canvas when the gap hugs a side of the grid. */
+.bb-gap--left > .bb-picker {
+  left: 0;
+  transform: none;
+}
+
+.bb-gap--right:not(.bb-gap--left) > .bb-picker {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.bb-tile-resize {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  touch-action: none;
+  transition: opacity 120ms var(--ease);
+}
+
+.bb-block-handle {
+  touch-action: none;
+}
+
+.bb-tile-resize--e {
+  top: 0;
+  right: -4px;
+  width: 8px;
+  height: 100%;
+  cursor: ew-resize;
+  background: linear-gradient(to right, transparent 3px, var(--accent-300) 3px 5px, transparent 5px);
+}
+
+.bb-tile-resize--s {
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 8px;
+  cursor: ns-resize;
+  background: linear-gradient(to bottom, transparent 3px, var(--accent-300) 3px 5px, transparent 5px);
+}
+
+.bb-tile-resize--se {
+  right: -6px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--accent-500);
+  cursor: nwse-resize;
+}
+
+.bb-tile-size {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  z-index: 4;
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: var(--font-technical);
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms var(--ease);
+}
+
+/* Straddles the corner, above the toolbar (z 3), which can reach this far left
+   on narrow tiles. */
+.bb-tile-grip {
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  opacity: 0;
+  transition: opacity 120ms var(--ease), color 120ms var(--ease);
+}
+
+.bb-tile-grip:hover {
+  color: var(--accent-700);
+  border-color: var(--accent-200);
+}
+
+.bb-block.is-tile-active > .bb-tile-grip {
+  cursor: grabbing;
+}
+
+.bb-block:hover > .bb-tile-grip,
+.bb-block:focus-within > .bb-tile-grip,
+.bb-block.is-tile-active > .bb-tile-grip,
+.bb-block:hover > .bb-tile-resize,
+.bb-block:hover > .bb-tile-size,
+.bb-block:focus-within > .bb-tile-resize,
+.bb-block:focus-within > .bb-tile-size,
+.bb-block.is-tile-active > .bb-tile-resize,
+.bb-block.is-tile-active > .bb-tile-size {
+  opacity: 1;
+}
+
+.bb-block.is-overflowing::after {
+  content: "Clipped";
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  z-index: 4;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--warning-50);
+  color: var(--warning-700);
+  font-size: 11px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.bb-overflow-note {
+  margin: 0 0 10px;
+  color: var(--warning-700);
 }
 
 .is-hidden {
@@ -3352,8 +3667,7 @@ textarea.input {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .blog-chart-grid,
-  .blog-link-grid {
+  .blog-chart-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

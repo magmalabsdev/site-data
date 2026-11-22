@@ -1,5 +1,380 @@
 {
   "posts": [
+{
+  "id": "two-years-ago-my-life-changed-forever",
+  "visibility": true,
+  "title": "Two years ago, my life changed forever",
+  "summary": "From my first hackathon to my first indie release",
+  "images": {
+    "thumbnail": "/images/blog/two-years-ago-my-life-changed-forever/CS_00046.jpeg"
+  },
+  "content": [
+    {
+      "type": "text",
+      "tile": {
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 15
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "On the 23rd of November 2024, a young prospective Alex walked into Plug and Play Tech Center in Sunnyvale. Eight days earlier, a programmer friend of his mentioned that he was hosting a hackathon, and on the mention of free food, Alex decides to attend for the food and maybe possibly make a game on the side. Now, he stands at the main entrance, about to participate in the Counterspell Silicon Valley game jam. After checking in, he quickly finds a team and begins implementing his idea in Roblox. Over the next two days, he experiences ceremonies, workshops, mini events, peer voting, and of course, tons and tons of snacks. When the results came in, he discovered that he placed fourth, just shy of winning a prize. But while unremarkable at the time, these two days would go on to shape the next two years of his life. And here I am, typing this very sentence. Two years ago was my first game jam, and today, I’m launching my first indie game on Steam."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The age of discovery",
+      "tile": {
+        "x": 0,
+        "y": 15,
+        "w": 6,
+        "h": 11
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "Counterspell was my first exposure to hackathons, to indie game dev, and to Hack Club, and it kicked off a sort of “Age of hackathons” for me. During Spring of 2025, I attended MakerHacks 1, Viking Hacks 2025, Scrapyard Silicon Valley, Los Altos Hacks 9, and Milpitas Hacks 2, in the span of three months. There’s a feeling you get at hackathons that’s difficult to replicate: The hundred other students in the same room, the timer ticking to the shipping deadline, or the scramble to submit to devpost, it’s truly a distinct way to spend a weekend. Who would pay $90 for food, activities, and dances at prom when you can get all of that and more at a free hackathon?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "tile": {
+        "x": 2,
+        "y": 48,
+        "w": 4,
+        "h": 13
+      },
+      "layout": "single",
+      "figures": [
+        {
+          "src": "/images/blog/two-years-ago-my-life-changed-forever/ff.png"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The past three months",
+      "tile": {
+        "x": 0,
+        "y": 126,
+        "w": 6,
+        "h": 12
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "A Drop of Magenta wasn’t the highest rated game submitted to GMTK, not even close. Within Hack Club participants alone, three other games placed significantly higher than it, with one earning a top 100 score in the Narrative category. But it had the highest creativity rating out of all games submitted by developers I knew, and this gave me the confidence that it was worth expanding into a full polished indie game. That has led me to today. I’ve been working on this game for the past three and a half months, adding features, revamping UI, and designing levels, and today is the day it launches on Steam. You can buy the game at the link below, or play the free demo which is also on Steam."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Declaring independence",
+      "tile": {
+        "x": 0,
+        "y": 81,
+        "w": 6,
+        "h": 17
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This summer, I attended Fallout, my third flagship hackathon and my first hardware flagship. Between the amazing city of Shenzhen, touring the BAIC Guangzhou factory, and traveling on my own in a foreign country, Fallout was by far the best flagship hackathon I’ve attended (if you subtract getting food poisoning and missing the entire second half of the event, but that wasn’t really in the organizers’ control) But Fallout also marked my change in attitude around hackathons. Most hackathons are software hackathons where with enough skill and AI credits, I can use any software tool I like. But Fallout, being a hardware hackathon, has hardware limits. I can’t summon a raspberry pi into my hands no matter how many AI credits I have. I plan on talking about this more in depth in a future blog post, but in summary, our team spent a lot of time and energy designing around these limits, and with two of three teammates becoming incapacitated toward the end, we ultimately weren’t able to finish our project. This experience at Fallout made me realize just how much scope and polish I was giving up by confining projects to hackathons and programs."
+        }
+      ]
+    },
+    {
+      "type": "link-embed",
+      "tile": {
+        "x": 0,
+        "y": 138,
+        "w": 6,
+        "h": 4
+      },
+      "figures": [
+        {
+          "url": "https://store.steampowered.com/app/5206930/A_Drop_of_Magenta/",
+          "label": "A Drop of Magenta",
+          "description": "Steam store"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "The Transition Shift",
+      "tile": {
+        "x": 0,
+        "y": 61,
+        "w": 6,
+        "h": 20
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "2025 September 25th, Daydream was my first time helping organize a hackathon. I remember specifically that my event's lead, Dristi, was quite impressed by my experience even though I didn’t find it substantial. I helped with some of the sponsor outreach and media but my main role was mentoring during the second day. Projects were supposed to be due by 4, but of course everyone procrastinates on submitting so you end up with 100 teens all desperately trying to figure out how to build at 3:55. The build deadline got extended to 5 and everyone got an extra hour to panic. Dristi and the other organizers were busy dealing with logistics and since I was one of the more experienced game developers on the team, I went from table to table helping people build their games to itch. When I got selected by her to lead the next event, I think this hour of need was what made the difference. (Also, I was on the island with her [that would sound very different in any other context]) Since then, I've helped organize my local Campfire and Haven satellite events which brought together a combined 100 teenagers over two days building games for the first time, just like it was for me at Counterspell two years ago."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "What comes next",
+      "tile": {
+        "x": 0,
+        "y": 157,
+        "w": 6,
+        "h": 10
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "I have a lot of project ideas. Over the last two years, I’ve made a lot of games, but I’ve always enjoyed building hardware and mechanical systems as well. My next project is one that I've wanted to build for a while even before I got into hackathons, but I never had the technical capability to do. Now, with hardware hackathon and a year of experience on an FRC team under my belt, I believe I finally have the skills needed to pull this off. I want to build a robotic kitchen, a system of machines that turns raw ingredients into a cooked meal fully autonomously."
+        }
+      ]
+    },
+    {
+      "type": "big-number",
+      "title": "Magma Labs Robotic Kitchen",
+      "tile": {
+        "x": 0,
+        "y": 167,
+        "w": 6,
+        "h": 11
+      },
+      "figures": [
+        {
+          "title": "Coming",
+          "stat": "2027/2/6"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Special Thanks",
+      "tile": {
+        "x": 0,
+        "y": 178,
+        "w": 6,
+        "h": 6
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "None of this wouldn’t have been possible if not for the support I received from the Hack Club and indie game dev community. I would like to shout out"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "tile": {
+        "x": 0,
+        "y": 184,
+        "w": 6,
+        "h": 15
+      },
+      "figures": [
+        {
+          "type": "list",
+          "items": [
+            "Ruiyu, my programmer friend who introduced me to Counterspell",
+            "The organizers of Counterspell Silicon Valley",
+            "My school’s Game Development Club",
+            "Hack Club’s Shipwrecked team",
+            "My event’s lead and regional manager, Dristi",
+            "My CS teacher, Mr. McLeod, for being very generous on late homework when I was working on projects",
+            "Mark Brown, host of the GMTK Game Jam",
+            "My parents of course"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "tile": {
+        "x": 0,
+        "y": 40,
+        "w": 4,
+        "h": 12
+      },
+      "layout": "single",
+      "figures": [
+        {
+          "src": "/images/blog/two-years-ago-my-life-changed-forever/vikinghacks.jpg",
+          "caption": "Presenting my project to judges at Viking Hacks 2025"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "tile": {
+        "x": 0,
+        "y": 26,
+        "w": 6,
+        "h": 14
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "But hackathon projects felt like a one time throw away and I wanted to work on a larger long term project, and I got my chance when my school’s game dev club announced their annual showcase. This was also when I heard about Hack Club’s Shipwrecked program, one of their first flagship hackathons where coding for 60 hours would get me an invitation and flight to a hackathon on an island in Boston. After bouncing from engine to engine trying to find something that worked well for me, I decided to try learning Unity since I was already semi-familiar with the scripting language C# from my school’s Java class. This worked well and over the course of 100 or so programming hours, I made Folding Fury, a vertically scrolling combat game centered around a piece of paper. This game is pretty fun to play, but it uses external assets for a large part of the background and the UI is, to be honest, quite terrible so I never quite got to publishing it on Steam."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "tile": {
+        "x": 0,
+        "y": 98,
+        "w": 6,
+        "h": 16
+      },
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "I had always wanted to work on a long term indie project, but I abandoned my ideas often and never really committed to anything. But after a week of recovery, I was well enough to work on projects again. The 2026 GMTK game jam was right around the corner, so I decided to use it as a chance to quickly build something and then maybe keep developing it. I was not camping the theme reveal stream. When it was announced, I was instructing a python class at a local coding school. I watched the stream on my lunch break and immediately, an idea came to mind: A game about a paintbrush which needs to reach an end location, filling outlines along the way. Maybe there can be color mixing as well. Between afternoon code coaching, commuting, and 4 hours of sleep, I built a quick prototype with help from a few members of my school’s Game Development Club."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "tile": {
+        "x": 1,
+        "y": 114,
+        "w": 4,
+        "h": 12
+      },
+      "layout": "single",
+      "figures": [
+        {
+          "src": "/images/blog/two-years-ago-my-life-changed-forever/old-title.png"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "tile": {
+        "x": 0,
+        "y": 142,
+        "w": 6,
+        "h": 15
+      },
+      "layout": "single",
+      "figures": [
+        {
+          "src": "/images/blog/two-years-ago-my-life-changed-forever/cffs.avif",
+          "caption": "Group photo of Campfire Flagship hackathon. I am visible in the center-left."
+        }
+      ]
+    }
+  ],
+  "writtenAt": "2026-11-23",
+  "readMinutes": 7
+},
+    {
+  "id": "goodbye-hack-club",
+  "visibility": false,
+  "title": "Hack Club was Cool, Goodbye",
+  "summary": "Why I'm taking a break from Hack Club",
+  "content": [
+    {
+      "type": "text",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This is part two of my blog series on Hack Club. For part one, see [eeeeeee]."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Why would someone retire?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "As you know from my previous blog posts, Hack Club is an amazing organization that provides funded programs for teens to build their own projects. (And if you don't know what Hack Club is, go read my first post in the series) So why would anyone under the age limit have any reason to retire? For me, there are several confounding reasons, but the key stems from the fact that Hack Club structure and culture just no longer fit who I am as a person and a maker. Some of these concerns I have raised to higher ups within the organization and have received a dismissive answer which I will address in Q&A sections below."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Open source hacker culture",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "This is such a huge issue in my opinion that I've addressed it in two previous blog posts. I've specifically called out its problems in my blog post about Bootstraps Elitism. But for those who haven't read those, I'll do a quick recap."
+        },
+        {
+          "type": "paragraph",
+          "text": "There’s a culture that everything closed source is evil. I’ve been shamed for using Unity for gamedev several times.ii. Regularly having people try to convert me to linux (I don’t want to fiddle with OSes).iii. Similarly but less so people into building 3D printers love to hate on Bambu Lab.b. Assigning moral goodness to unnecessary work is also a thing.i. Some hardware programs didn’t allow using existing reference parts, demanding a from scratch design.ii. Said programs also do not allow auto routing in PCBs"
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "figures": [
+        {
+          "question": "\"It's so you learn how to do it yourself\"",
+          "answer": "But at some point I just want to get the project done. A project involves way more steps than just those few and even with skipping them I’m learning a lot of skills. Arguing that I should do every single step manually instead of doing the majority on my own and using a convenience feature for the few that are super annoying is a nirvana fallacy. It also reduces my hour count aka payout so it’s not like I’m profiting off it.."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "What is hardware?",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "The New Oxford American Dictionary defines hardware as \"The machines, wiring, and other physical components of a computer or other electronic system. Compare with software,\" and this definition overlaps completely with what I and most average people consider hardware: physical systems including both mechanics, and electronics. But if you're participating in a Hack Club \"hardware\" program, you can essentially forget this definition. Within Hack Club hardware programs, hardware means electronics and only electronics."
+        },
+        {
+          "type": "paragraph",
+          "text": "“Hardware” is basically just electronics and programs essentially DGAF about mechanical engineering.a. A certain flagship event I won’t name.i. Had four different types of weather sensors.1. Had detailed documentation of all electronic components.2. Mandated a PCB as a starter project.ii. Did not include ANY screws for the entire first half (not even pcb mounting screws).1. Initially, teams were told to “just glue it down” when asking about screws.2. It was so bad that people were buying their own screws and reselling them for a profit.3. They eventually acquired some, but these were large machine screws unusable for small projects, shows how little planning went into mechanical"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hack Club hardware programs tolerate mechanical, they do not accept it"
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "figures": [
+        {
+          "question": "If you can’t design a project without screws, that’s a skill issue",
+          "answer": "First of all, we were told specifically to “build polished projects”. A project held together with screws (especially countersunk screws) is way more polished than one glued together, with no relation to screws. IT’S JUST GOOD DESIGN. Additionally, Hack Club’s entire culture (as mentioned above) revolves around open source and DIY, and it seems extremely hypocritical for them to overreach “right to repair” in open source code but not give a damn about repairing mechanical systems. I can design things without screws, but it’s a huge pain to have to reglue the same part again and again to make iterations and it’s really not that hard to get them."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "My personal reasons",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "a. Every program has its own timeframe.i. Transferring projects is annoying.ii. I have to think “does this project I want to do fit within the program”.1. Especially annoying if I decide to start a longterm project mid program.iii. CD: “the end date exists to motivate people to finish”.1. but I’m working on more long term projects now and with school I really don’t have the time to speedrun a project and maintain a not terrible GPA at the same time.b. Peer voting is still very heavily pushed.i. I raised concerns over peer voting before and it’s better than when I first joined at Counterspell.ii. Time after time, hackathon after hackathon, my projects have been rejected by peer voting (not once even made it into the final round). The only times I’ve won is with judged prizes..iii. CD: “if you can’t win peer voting it’s because nobody likes your project”.1. This is exactly why I’m retiring from Hack Club. I don’t think my projects are terrible and I spent a huge amount of effort on them, but genuinely nobody likes them..c. Skill gap.i. A lot of Hack Clubbers (even those who started less than a year ago) are more skilled than me in everything. I’m naturally a competitive person and living in the Bay Area as an asian is not great for my mental health, but the HC skill gap exacerbates the issue..ii. CD: “It helps motivate you to be better”.1. Sure. I’ve cried several times over the course of developing my indie game because I felt like it wasn’t good enough and I was a failure. I’ve wanted to quit two flagship hackathons midway because my idea wasn’t as impressive as others. Tell me how wrecking my mental health helps me..d. Overtheming.i. HC game jams always have hyperspecific themes like “Beneath the surface” “Sacrifices must be made”.1. This is so restrictive that I can’t think of a good creative game idea. I performed terribly at Daydream Global partly for this reason. I also completely skipped Campfire Global and will likely skip Haven for the same reason..2. GMTK game jam has themes as well but they’re general enough that I can think of several creative ideas that aren’t just “platformer + mechanic” Read my indie game..3. CD: “This is for beginners who don’t have ideas”.a. Exactly, it’s not built for me. Also, having a broader theme for beginners arguably isn’t even bad. It gives them more options including some which are easier to implement programmatically..I’m still grateful for everything I’ve been able to do at Hack Club, but as I pivot to more long term projects, I believe the structure and culture of Hack Club is ultimately incompatible with what I am trying to do. I may reconsider my choices if I see clear evidence of change, but I don’t forsee that in the near future."
+        },
+        {
+          "type": "paragraph",
+          "text": "Overall, within Hack Club I felt like Nico di Angelo from the Percy Jackson series: I've been involved in a large number of programs, events, and flagships, but nobody ever notices or cares about me."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Co-existence",
+      "figures": [
+        {
+          "type": "paragraph",
+          "text": "eeeee"
+        }
+      ]
+    }
+  ],
+  "writtenAt": "2026-11-10",
+  "readMinutes": 6
+},
     {
   "id": "bootstraps-elitism-needs-to-stop",
   "visibility": true,
